@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel-wrapper mt-3">
+    <div class="carousel-wrapper">
         <img :src="currentImage" alt="">
         <div class="indicator d-flex align-items-center gap-4">
             <span class="cursor-pointer" :class="{active: currentImageIndex == 0}" @click="changeImageIndex(0)">Fastest Growing Company</span>
@@ -50,7 +50,7 @@ import { onMounted, ref } from 'vue'
 <style scoped>
     .carousel-wrapper {
         width: 100%;
-        height: 500px;
+        height: 600px;
         position: relative;
     }
 

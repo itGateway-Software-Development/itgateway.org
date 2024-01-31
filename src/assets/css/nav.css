@@ -1,3 +1,4 @@
+
 nav .logo {
     width: 4rem;
     height: 4rem;
@@ -8,9 +9,24 @@ nav .logo img {
     height: 100%;
 }
 
-nav .menu {
+nav .top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.main-nav {
+    display: flex;
+    justify-content: start;
+}
+
+nav .mobile-menu-btn {
+    display: none;
+}
+
+ .menu {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.03rem;
     margin-right: 1rem;
     transition: .3s ease;
@@ -23,7 +39,7 @@ nav .menu:hover {
 /* menu with icon is inside span tag  */
 nav .span-menu {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.03rem;
 }
 
@@ -32,7 +48,7 @@ nav .span-menu:hover {
 }
 
 nav .menu-btn {
-    font-size: 1.1rem;
+    font-size: .9rem;
     letter-spacing: .05rem;
     transition: .3s ease;
     color: var(--btn-font-color) !important;
@@ -51,6 +67,7 @@ nav .dark-icon {
     position: relative;
 }
 
+/* dark mode toggle  */
 nav .menu-icon .menu-icon-info {
   width: 120px;
   background-color: #555;
@@ -85,10 +102,145 @@ nav .menu-icon:hover .dark-icon-info {
     visibility: visible;
     opacity: 1;
 }
+/* dark mode toggle end  */
 
-nav .light-icon:hover .light-icon-info {
+/* search input  */
+nav .search-input-wrapper {
+    position: relative;
+}
+
+nav .search-input {
+    background: var(--sec-font-color);
+    border-radius: 100px 0 0 100px;
+    padding: 3px 15px;
+    color: var(--main-color);
+    font-size: 18px;
+    width: 0px;
+    position: absolute;
+    right: 52px;
+    height: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+nav .search-input.searching {
     visibility: visible;
     opacity: 1;
+    width: 500px;
+}
+
+nav .search-input:focus {
+    outline: none;
+}
+
+nav .search-bar-icon {
+    transition: .9s ease-out;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px 0px;
+    margin-right: .5rem;
+    border-radius: 0 100px 100px 0;
+}
+
+nav .search-bar-icon.searching {
+    transition: .3s ease-in-out;
+    background: #cecdcd;
+}
+/* search input end */
+
+/* languages  */
+nav .language-wrapper {
+    transition: .3s ease;
+}
+
+nav .language {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    margin-left: -10px;
+    background: var(--sec-font-color);
+    color: var(--background-color);
+    padding: 10px 15px;
+    z-index: 99;
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+nav .language::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent var(--sec-font-color) transparent;
+}
+
+nav .language-wrapper:hover .language {
+    opacity: 1;
+    visibility: visible;
+    height: 80px;
+}
+
+nav .language button {
+    margin-bottom: 5px;
+    transition: .3s ease;
+    font-size: .9rem;
+}
+
+nav .language button:hover {
+    color: var(--main-color);
+}
+/* language end  */
+
+
+/* menu dropdown  */
+.menu .dropdown {
+    position: absolute;
+    background: var(--background-color);
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    top: 70%;  /*important - for coverage a:hover */
+    pointer-events: auto; 
+    visibility: hidden;
+}
+.menu:hover .dropdown{
+    visibility: visible;
+    color: var(--font-color);
+}
+
+.menu .dropdown .content {
+    width: 100%;
+    border-top: 2px solid var(--main-color);
+}
+
+.menu .dropdown ul {
+    list-style: none;
+    display: inline-block;
+    border-right: 2px solid var(--main-color);
+}
+
+.menu .dropdown ul li {
+    margin-bottom: 10px;
+
+}
+
+/* =============================
+    breakponts
+===============================*/
+@media (max-width: 768px) {
+    nav .top-menu, nav.main-nav {
+        display: none !important;
+    }
+
+    nav .mobile-menu-btn {
+        display: block;
+    }
 }
 
 

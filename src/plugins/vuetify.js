@@ -20,7 +20,7 @@ const customDarkTheme = {
 const customLightTheme = {
   dark: false,
   colors: {
-    background: "#eee",
+    background: "#F2F3F4",
     surface: "#15202b",
     primary: "#3f51b5",
     secondary: "#00ccff",

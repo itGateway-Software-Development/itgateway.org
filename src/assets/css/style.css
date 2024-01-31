@@ -12,11 +12,17 @@
   text-size-adjust: none;
 }
 
+/* for dark mode  */
 :root {
   --background-color: #242142;
   --font-color: #ededed;
+  --sec-font-color: #dcdcdc;
   --btn-font-color: #ededed;
   --main-color: #EC6316;
+}
+
+#app {
+  max-width: 1980px;
 }
 
 
@@ -35,7 +41,7 @@
   user-select: none; /* Standard syntax */
 }
 
-nav {
+nav, nav .dropdown {
   padding: 10px 3%;
 }
 
@@ -50,6 +56,13 @@ nav {
 
 .main-btn:hover {
   background: #e06d2a;
+}
+
+/* ========================
+    Mobile Menu Drawer
+==========================*/
+#drawer {
+    width: 90% !important;
 }
 
 
