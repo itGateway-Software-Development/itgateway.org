@@ -65,7 +65,7 @@
       <div class="dropdown">
         <div class="content d-flex gap-5">
             <ul class="pt-5 pe-5">
-              <li @mouseover="dropdownContent = 'cloud-service'" >
+              <li @mouseover="dropdownContent = 'cloud-service'">
                 Cloud Services
               </li>
               <li>
