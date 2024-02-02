@@ -9,15 +9,17 @@
   font-weight: 400;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
+  font-size: 1.2rem;
   text-size-adjust: none;
 }
 
 /* for dark mode  */
 :root {
   --background-color: #242142;
+  --light-background-color: #dcdcdc;
   --font-color: #ededed;
+  --dark-font-color: #A22E76;
   --sec-font-color: #dcdcdc;
-  --btn-font-color: #ededed;
   --main-color: #EC6316;
 }
 
@@ -30,6 +32,20 @@
   text-decoration: none;
   color: var(--font-color);
 }
+
+#app .primary-btn {
+  border-radius: 0px 18px 0 18px;
+  color: #ededed;
+  font-size: .9rem;
+  letter-spacing: .05rem;
+  transition: .3s ease;
+}
+
+#app .primary-btn:hover {
+    color: var(--dark-font-color) !important;
+    background: var(--light-background-color);
+}
+
 
 #app .icon {
   color: var(--main-color);

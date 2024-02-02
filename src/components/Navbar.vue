@@ -19,16 +19,18 @@
               search
             </span>
         </span>
-        <router-link to="" class="menu">Contact</router-link>
-        <router-link to="" class="menu">About</router-link>
+        <router-link to="" class="menu">{{ $t("contact") }}</router-link>
+        <router-link to="" class="menu">{{ $t("about") }}</router-link>
         <router-link to="" class="menu d-flex align-items-center position-relative language-wrapper">
-          <span class="span-menu">ENGLISH</span><i class="mdi mdi-menu-down"></i>
+          <span v-if="language == 'EN'" class="span-menu">ENGLISH</span>
+          <span v-else class="span-menu">မြန်မာ</span>
+          <i class="mdi mdi-menu-down"></i>
           <div class="language">
-            <button>ENGLISH</button>
-            <button>MYANMAR</button>
+            <button @click="changeLanguage('EN')">ENGLISH</button>
+            <button @click="changeLanguage('MM')">MYANMAR</button>
           </div>
         </router-link>
-        <a href="#" class="menu btn btn-sm main-btn menu-btn">Customer Portal</a>
+        <a href="#" class="menu btn btn-sm main-btn menu-btn primary-btn">{{ $t('customer_portal') }}</a>
         
         <!-- dark icon  -->
         <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon" :class="{'d-none': currentTheme == 'customDarkTheme'}" @click="setTheme('customDarkTheme')">
@@ -61,52 +63,24 @@
 
   <nav class=" main-nav pt-0 position-relative">
     <router-link to="#" class="menu service-group">
-      Service Groups
-      <div class="dropdown">
-        <div class="content d-flex gap-5">
-            <ul class="pt-5 pe-5">
-              <li @mouseover="dropdownContent = 'cloud-service'">
-                Cloud Services
-              </li>
-              <li>
-                Software Development
-              </li>
-              <li>
-                Premium IT Solutions
-              </li>
-              <li>
-                Engineering Solutions
-              </li>
-              <li>
-                Managed Services
-              </li>
-              <li>
-                IT Trainings
-              </li>
-              <li>
-                Cyber Security
-              </li>
-              <li>
-                Application Services
-              </li>
-            </ul>
-            <div class="service-content pt-5">
-              <div v-if="dropdownContent == 'cloud-service'">
-                <h6>itGateway Cloud</h6>
-                <p>
-                  Running your cloud requirements on itGateway Cloud Infracture.
-                </p>
-              </div>
-            </div>
-        </div>
-      </div>
+      {{ $t('service-group') }}
+      <ServiceGroup />
     </router-link>
-    <router-link to="#" class="menu">Solutions</router-link>
-    <router-link to="#" class="menu">Products</router-link>
-    <router-link to="#" class="menu">Blogs</router-link>
-    <router-link to="#" class="menu">Partners</router-link>
-    <router-link to="#" class="menu">Event</router-link>
-    <router-link to="#" class="menu">Careers</router-link>
+    <router-link to="#" class="menu">
+      {{ $t('solutions') }}
+      <Solutions :dropdownContent=dropdownContent />
+    </router-link>
+    <router-link to="#" class="menu">
+      {{ $t('products') }}
+      <Products />
+    </router-link>
+    <router-link to="#" class="menu">
+      {{ $t('blogs') }}
+      <Blogs />
+    </router-link>
+    <router-link to="#" class="menu">{{ $t('partners') }}</router-link>
+    <router-link to="#" class="menu">{{ $t('event') }}</router-link>
+    <router-link to="#" class="menu">{{ $t('careers') }}</router-link>
   </nav>
 </template>
 
@@ -115,15 +89,23 @@ import "@/assets/css/nav.css";
 import { ref } from "vue";
 import { useTheme } from "vuetify";
 import { useRouter } from "vue-router";
+import Solutions from '@/components/navDropdown/Solutions';
+import ServiceGroup from '@/components/navDropdown/ServiceGroup';
+import Products from '@/components/navDropdown/Products';
+import Blogs from '@/components/navDropdown/Blogs';
+import { useStore } from "vuex";
 
 export default {
+  components: {Solutions, ServiceGroup, Products, Blogs},
   setup() {
     const theme = useTheme();
     const currentTheme = ref(theme.global.name.value);
     const isSearch = ref(false);
     const drawer = ref(false);
     const router = useRouter();
-    const dropdownContent = ref(null);
+    const dropdownContent = ref('cloud');
+    const store = useStore();
+    const language = ref('EN');
 
     const navigate = (route) => {
       router.push(route);
@@ -134,14 +116,23 @@ export default {
       //change text color
       if(theme_mode == 'customLightTheme') {
         document.documentElement.style.setProperty('--font-color', '#3F3F3F');
+        document.documentElement.style.setProperty('--background-color', '#F2F3F4');
+
       } else {
         document.documentElement.style.setProperty('--font-color', '#ededed');
+        document.documentElement.style.setProperty('--background-color', '#242142');
+
       }
       theme.global.name.value = theme_mode;
       currentTheme.value = theme_mode;
       };
 
-      return {setTheme, currentTheme, isSearch, drawer, navigate, dropdownContent}
+    const changeLanguage = (lang) => {
+      language.value = lang;
+      store.dispatch('getLocale', lang);
+    }
+
+      return {setTheme, currentTheme, isSearch, drawer, navigate, dropdownContent, changeLanguage, language}
   }
 };
 </script>

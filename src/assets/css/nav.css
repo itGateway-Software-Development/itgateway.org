@@ -24,11 +24,10 @@ nav .mobile-menu-btn {
     display: none;
 }
 
- .menu {
-    text-transform: uppercase;
+ a.menu {
     font-size: 1rem;
     letter-spacing: 0.03rem;
-    margin-right: 1rem;
+    padding-right: 1rem;
     transition: .3s ease;
 }
 
@@ -48,14 +47,7 @@ nav .span-menu:hover {
 }
 
 nav .menu-btn {
-    font-size: .9rem;
-    letter-spacing: .05rem;
-    transition: .3s ease;
-    color: var(--btn-font-color) !important;
-}
-
-nav .menu-btn:hover {
-    background: var(--font-color);
+    margin-right: 1rem;
 }
 
 nav .menu-icon {
@@ -159,8 +151,8 @@ nav .language {
     top: 130%;
     left: 0;
     margin-left: -10px;
-    background: var(--sec-font-color);
-    color: var(--background-color);
+    background: var(--light-background-color);
+    color: var(--dark-font-color);
     padding: 10px 15px;
     z-index: 99;
     height: 0px;
@@ -216,19 +208,28 @@ nav .language button:hover {
 
 .menu .dropdown .content {
     width: 100%;
-    border-top: 2px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
 }
 
 .menu .dropdown ul {
     list-style: none;
     display: inline-block;
-    border-right: 2px solid var(--main-color);
+}
+
+.menu .dropdown ul.multi {
+    width: 12%;
+    border-right: 1px solid var(--main-color);
 }
 
 .menu .dropdown ul li {
     margin-bottom: 10px;
-
 }
+
+.menu .dropdown ul li.active {
+    color: var(--main-color);
+}
+
+
 
 /* =============================
     breakponts
