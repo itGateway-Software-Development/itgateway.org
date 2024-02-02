@@ -10,6 +10,7 @@
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   font-size: 1.2rem;
+  letter-spacing: 0.01rem;
   text-size-adjust: none;
 }
 
@@ -39,6 +40,7 @@
   font-size: .9rem;
   letter-spacing: .05rem;
   transition: .3s ease;
+  font-weight: 550;
 }
 
 #app .primary-btn:hover {
