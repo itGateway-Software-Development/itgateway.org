@@ -3,7 +3,7 @@
         <div class="content d-flex gap-5">
             <ul class="pt-5 ps-5">
               <li>
-                DevOps​
+                DevOps​ 
               </li>
               <li>
                 Cloud​
