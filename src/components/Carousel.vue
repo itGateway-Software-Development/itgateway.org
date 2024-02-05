@@ -20,9 +20,9 @@
             <button class="btn primary-btn bg-white d-flex gap-2 align-items-center">Read More <span class="material-symbols-outlined">east</span></button>
         </div>
         <div class="indicator d-flex align-items-center gap-4">
-            <span class="cursor-pointer" :class="{active: currentImageIndex == 0}" @click="changeImageIndex(0)">Fastest Growing Company</span>
-            <span class="cursor-pointer" :class="{active: currentImageIndex == 1}" @click="changeImageIndex(1)">Global Cloud Infracture</span>
-            <span class="cursor-pointer" :class="{active: currentImageIndex == 2}" @click="changeImageIndex(2)">Research & Development</span>
+            <span class="cursor-pointer text-white" :class="{active: currentImageIndex == 0}" @click="changeImageIndex(0)">Fastest Growing Company</span>
+            <span class="cursor-pointer text-white" :class="{active: currentImageIndex == 1}" @click="changeImageIndex(1)">Global Cloud Infracture</span>
+            <span class="cursor-pointer text-white" :class="{active: currentImageIndex == 2}" @click="changeImageIndex(2)">Research & Development</span>
         </div>
     </div>
 </template>
@@ -36,7 +36,9 @@ import { onMounted, ref } from 'vue'
                 require('@/assets/images/carousel/1.png'),
                 require('@/assets/images/carousel/2.png'),
                 require('@/assets/images/carousel/3.png'),
-            ]
+            ];
+
+            let intervalId;
     
             const currentImageIndex = ref(0);
             const currentImage = ref(images[currentImageIndex.value])
@@ -53,11 +55,16 @@ import { onMounted, ref } from 'vue'
 
             const changeImageIndex = (index) => {
                 currentImageIndex.value = index;
-                currentImage.value = images[currentImageIndex.value]
+                currentImage.value = images[currentImageIndex.value];
+
+                 // Clear the existing interval and set a new one
+                clearInterval(intervalId);
+                intervalId = setInterval(slider, 6000);
             }
 
             onMounted(() => {
-                setInterval(slider, 6000);
+                // Set the initial interval
+                intervalId = setInterval(slider, 6000);
             })
 
             return {currentImage, currentImageIndex, changeImageIndex}
