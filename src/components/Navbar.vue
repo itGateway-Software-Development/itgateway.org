@@ -1,5 +1,6 @@
 <template>
-  <nav class="pb-1">
+  <div class="nav-wrapper">
+    <nav class="pb-1">
     <div class="d-flex justify-content-between align-items-center">
       <div class="logo">
         <img :src="require('@/assets/images/logo.png')" alt="">
@@ -43,45 +44,46 @@
         </span>
       </div>
     </div>
-  </nav>
+    </nav>
 
-  <!-- mobile menu  -->
-  <v-navigation-drawer app v-model="drawer" id="drawer" temporary>
-    <v-list>
-      <v-list-item @click="navigate('/')" class="head-menu">
-        <v-list-item-title style="font-size: 14px; color: #50c4ff">
-          <span>itGateway</span>
-        </v-list-item-title>
-      </v-list-item>
-      <v-list-item @click="navigate('/')">
-        <v-list-item-title class="main-title">
-          <v-icon icon="mdi-home"></v-icon> Home</v-list-item-title
-        >
-      </v-list-item>
-    </v-list>
-  </v-navigation-drawer>
+    <!-- mobile menu  -->
+    <v-navigation-drawer app v-model="drawer" id="drawer" temporary>
+      <v-list>
+        <v-list-item @click="navigate('/')" class="head-menu">
+          <v-list-item-title style="font-size: 14px; color: #50c4ff">
+            <span>itGateway</span>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item @click="navigate('/')">
+          <v-list-item-title class="main-title">
+            <v-icon icon="mdi-home"></v-icon> Home</v-list-item-title
+          >
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
-  <nav class=" main-nav pt-0 position-relative">
-    <router-link to="#" class="menu service-group">
-      {{ $t('service-group') }}
-      <ServiceGroup />
-    </router-link>
-    <router-link to="#" class="menu">
-      {{ $t('solutions') }}
-      <Solutions :dropdownContent=dropdownContent />
-    </router-link>
-    <router-link to="#" class="menu">
-      {{ $t('products') }}
-      <Products />
-    </router-link>
-    <router-link to="#" class="menu">
-      {{ $t('blogs') }}
-      <Blogs />
-    </router-link>
-    <router-link to="#" class="menu">{{ $t('partners') }}</router-link>
-    <router-link to="#" class="menu">{{ $t('event') }}</router-link>
-    <router-link to="#" class="menu">{{ $t('careers') }}</router-link>
-  </nav>
+    <nav class=" main-nav pt-0 position-relative">
+      <router-link to="#" class="menu service-group">
+        {{ $t('service-group') }}
+        <ServiceGroup />
+      </router-link>
+      <router-link to="#" class="menu">
+        {{ $t('solutions') }}
+        <Solutions :dropdownContent=dropdownContent />
+      </router-link>
+      <router-link to="#" class="menu">
+        {{ $t('products') }}
+        <Products />
+      </router-link>
+      <router-link to="#" class="menu">
+        {{ $t('blogs') }}
+        <Blogs />
+      </router-link>
+      <router-link to="#" class="menu">{{ $t('partners') }}</router-link>
+      <router-link to="#" class="menu">{{ $t('event') }}</router-link>
+      <router-link to="#" class="menu">{{ $t('careers') }}</router-link>
+    </nav>
+  </div>
 </template>
 
 <script>

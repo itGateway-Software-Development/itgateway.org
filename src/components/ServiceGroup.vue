@@ -6,7 +6,7 @@
                     <h4 class="text-center">{{service.title}}</h4>
                     <p>{{service.content}}</p>
                     <router-link :to="`${service.url}`" class="d-flex align-items-center gap-2">
-                        <span>Read More</span> <span class="material-symbols-outlined mt-1">arrow_right_alt</span>
+                        <span>Read More</span> <span class="material-symbols-outlined mt-1 ms-1">arrow_right_alt</span>
                     </router-link>
                 </div>
             </div>
@@ -76,10 +76,26 @@
         height: 220px;
         border-radius: 10px;
         position: relative;
+        overflow:hidden;
+    }
+
+    .service-container:hover {
+        background: linear-gradient(to right, #a22e75c5, #ec6416ab);
+    }
+
+    .service-container h4 {
+        color: var(--main-color);
+        font-weight: bold;
     }
 
     .service-container a {
         position: absolute;
         bottom: 15px;
+        transform: translateX(-98px);
+        transition: .5s ease;
+    }
+
+    .service-container:hover a {
+        transform: translateX(0);
     }
 </style>

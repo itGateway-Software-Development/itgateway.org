@@ -77,6 +77,7 @@ import { onMounted, ref } from 'vue'
         width: 100%;
         height: 700px;
         position: relative;
+        margin-top: 112px;
     }
 
     .carousel-wrapper img {
