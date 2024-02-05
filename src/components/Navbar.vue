@@ -34,11 +34,11 @@
         <a href="#" class="menu btn btn-sm main-btn menu-btn primary-btn">{{ $t('customer_portal') }}</a>
         
         <!-- dark icon  -->
-        <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon" :class="{'d-none': currentTheme == 'customDarkTheme'}" @click="setTheme('customDarkTheme')">
+        <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon theme-icon" @click="changeTheme('dark')" :class="{'d-none': currentTheme == 'dark'}" >
           light_mode
           <span class="light-icon-info menu-icon-info">change to dark</span>
         </span>
-        <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select dark-icon" :class="{'d-none': currentTheme == 'customLightTheme'}" @click="setTheme('customLightTheme')">
+        <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select dark-icon theme-icon" @click="changeTheme('light')" :class="{'d-none': currentTheme == 'light'}" >
           dark_mode
           <span class="dark-icon-info menu-icon-info">change to light</span>
         </span>
@@ -63,25 +63,25 @@
     </v-navigation-drawer>
 
     <nav class=" main-nav pt-0 position-relative">
-      <router-link to="#" class="menu service-group">
+      <router-link to="#" class="menu service-group" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('service-group') }}
         <ServiceGroup />
       </router-link>
-      <router-link to="#" class="menu">
+      <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('solutions') }}
         <Solutions :dropdownContent=dropdownContent />
       </router-link>
-      <router-link to="#" class="menu">
+      <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('products') }}
         <Products />
       </router-link>
-      <router-link to="#" class="menu">
+      <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('blogs') }}
         <Blogs />
       </router-link>
-      <router-link to="#" class="menu">{{ $t('partners') }}</router-link>
-      <router-link to="#" class="menu">{{ $t('event') }}</router-link>
-      <router-link to="#" class="menu">{{ $t('careers') }}</router-link>
+      <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">{{ $t('partners') }}</router-link>
+      <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">{{ $t('event') }}</router-link>
+      <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">{{ $t('careers') }}</router-link>
     </nav>
   </div>
 </template>
@@ -89,7 +89,6 @@
 <script>
 import "@/assets/css/nav.css";
 import { ref } from "vue";
-import { useTheme } from "vuetify";
 import { useRouter } from "vue-router";
 import Solutions from '@/components/navDropdown/Solutions';
 import ServiceGroup from '@/components/navDropdown/ServiceGroup';
@@ -99,9 +98,8 @@ import { useStore } from "vuex";
 
 export default {
   components: {Solutions, ServiceGroup, Products, Blogs},
-  setup() {
-    const theme = useTheme();
-    const currentTheme = ref(theme.global.name.value);
+  setup(props, {emit}) {
+    const currentTheme = ref('dark');
     const isSearch = ref(false);
     const drawer = ref(false);
     const router = useRouter();
@@ -113,28 +111,15 @@ export default {
       router.push(route);
       drawer.value = false;
     }
-
-    const setTheme = (theme_mode) => {
-      //change text color
-      if(theme_mode == 'customLightTheme') {
-        document.documentElement.style.setProperty('--font-color', '#3F3F3F');
-        document.documentElement.style.setProperty('--background-color', '#F2F3F4');
-
-      } else {
-        document.documentElement.style.setProperty('--font-color', '#ededed');
-        document.documentElement.style.setProperty('--background-color', '#242142');
-
-      }
-      theme.global.name.value = theme_mode;
-      currentTheme.value = theme_mode;
-      };
+    const changeTheme = (theme) => { currentTheme.value = theme };
+    const menuHover = (value) => emit("menuHoverStatus", value);
 
     const changeLanguage = (lang) => {
       language.value = lang;
       store.dispatch('getLocale', lang);
     }
 
-      return {setTheme, currentTheme, isSearch, drawer, navigate, dropdownContent, changeLanguage, language}
+      return { currentTheme,changeTheme, isSearch, drawer, navigate, dropdownContent, changeLanguage, language, menuHover}
   }
 };
 </script>

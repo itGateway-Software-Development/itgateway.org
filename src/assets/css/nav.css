@@ -157,8 +157,8 @@ nav .language {
     top: 130%;
     left: 0;
     margin-left: -10px;
-    background: var(--light-background-color);
-    color: var(--dark-font-color);
+    background: var(--language-bg-color);
+    color: #A22E76;
     padding: 10px 15px;
     z-index: 99;
     height: 0px;
@@ -175,7 +175,7 @@ nav .language::before {
     margin-left: -5px;
     border-width: 7px;
     border-style: solid;
-    border-color: transparent transparent var(--sec-font-color) transparent;
+    border-color: transparent transparent var(--language-bg-color) transparent;
 }
 
 nav .language-wrapper:hover .language {
@@ -205,11 +205,18 @@ nav .language button:hover {
     left: 0;
     top: 70%;  /*important - for coverage a:hover */
     pointer-events: auto; 
-    visibility: hidden;
+    height: 0;
+    transition: .4s ease !important;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
 }
 .menu:hover .dropdown{
-    visibility: visible;
+    height: 500px;
+    opacity: 1;
     color: var(--font-color);
+    pointer-events: visible;
+    overflow: visible;
 }
 
 .menu .dropdown .content {

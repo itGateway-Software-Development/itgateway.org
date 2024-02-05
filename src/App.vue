@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <Navbar />
-    <v-main>
+    <Navbar @menuHoverStatus="menuHoverEffect"/>
+    <v-main :class="{blurPage : isHover}">
       <Loading v-if="loading" />
       <router-view />
     </v-main>
@@ -16,19 +16,25 @@ export default {
   components: { Navbar, Loading },
   setup() {
     const loading = ref(true);
+    const isHover = ref(false);
+
+    const menuHoverEffect = (data) => isHover.value = data;
     
     onMounted(() => {
       loading.value = false;
     })
 
-    return {loading}
+    return {loading, menuHoverEffect, isHover}
   },
 
 };
 </script>
 
 <style>
-
+  .blurPage {
+    filter: blur(5px) brightness(.5);
+    background: rgb(255, 254, 254);
+  }
 </style>
 
 

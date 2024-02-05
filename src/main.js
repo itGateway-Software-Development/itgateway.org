@@ -3,6 +3,7 @@ import { createI18n } from "vue-i18n";
 import EN from "./locale/en.json";
 import MM from "./locale/mm.json";
 import './assets/css/style.css'
+import './assets/js/theme'
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";

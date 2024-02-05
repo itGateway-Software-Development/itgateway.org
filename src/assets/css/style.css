@@ -17,15 +17,31 @@
 /* for dark mode  */
 :root {
   --background-color: #242142;
-  --light-background-color: #dcdcdc;
+  --background-light-color: #f2f3f4;
+
+  --sec-background-color: #3a347a;
+  --sec-background-light-color: #dfe6ee;
+
   --font-color: #ededed;
-  --dark-font-color: #A22E76;
-  --sec-font-color: #dcdcdc;
+  --font-dark-color: #3f3f3f;
+
+  --sec-font-color: #A22E76;
+  --sec-font-light-color: #ededed;
+
   --main-color: #EC6316;
+
+  --language-bg-color: #f2f2f2;
+  --language-bg-light-color : #dcdcdc;
+
 }
 
 #app {
   max-width: 1980px;
+}
+
+#app .v-application__wrap {
+  background: var(--background-color);
+  color: var(--font-color);
 }
 
 
@@ -44,8 +60,8 @@
 }
 
 #app .primary-btn:hover {
-    color: var(--dark-font-color) !important;
-    background: var(--light-background-color);
+    color: var(--sec-font-color) !important;
+    background: var(--background-light-color);
 }
 
 
@@ -68,13 +84,15 @@ nav, nav .dropdown {
 }
 
 .main-btn {
-  background: #EC6316;
+  background: var(--main-color);
   color: var(--font-color);
 }
 
 .main-btn:hover {
-  background: #e06d2a;
+  background: var(--background-light-color);
+  color: var(--sec-font-color);
 }
+
 
 /* ========================
     Mobile Menu Drawer
