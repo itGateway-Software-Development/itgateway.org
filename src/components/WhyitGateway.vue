@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="collapse-item border-none d-flex justify-content-end">
-                <a href="" class="d-flex align-items-center"> View Managed Cloud Services  
+                <a href="" class="d-flex align-items-center more-report"> Read More Reports  
                     <span class="material-symbols-outlined">arrow_right_alt</span>
                 </a>
             </div>
@@ -50,15 +50,6 @@
     setup() {
             const bg_img = require('@/assets/images/whyitGateway/itgateway.png');
 
-            // const showCollapse = (el) => {
-            //     const collapseElement = new bootstrap.Collapse(document.getElementById(`${el}`));
-            //     collapseElement.show();
-            // }
-
-            // const hideCollapse = (el) => {
-            //     const collapseElement = new bootstrap.Collapse(document.getElementById(`${el}`));
-            //     collapseElement.hide();
-            // }
             return {bg_img}
         }
     }
@@ -82,7 +73,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #a22e75c5, #ec6416a8);
+    background: linear-gradient(to right, #a22e75d5, #ec6416bb);
     z-index: 0 !important;
 }
 
@@ -113,6 +104,25 @@
 
 .whyitgateway .content .collapse-item:hover .collapsable {
     height: 30px;
+}
+
+.whyitgateway .content .more-report {
+    position: relative;
+}
+
+.whyitgateway .content .more-report::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    transition: .3s;
+}
+
+.whyitgateway .content .more-report:hover::before {
+    width: 100% ;
 }
 
 </style>
