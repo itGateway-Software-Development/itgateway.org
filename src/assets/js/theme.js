@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
           //change to light mode
           document.documentElement.style.setProperty("--background-color","#F2F3F4");
           document.documentElement.style.setProperty("--font-color", "#3F3F3F");
+          document.documentElement.style.setProperty("--font-dark-color", "#ededed");
           document.documentElement.style.setProperty( "--language-bg-color","#dcdcdc");
           document.documentElement.style.setProperty("--sec-background-color","#dfe6ee");
           document.documentElement.style.setProperty("--sec-background-light-color","#3a347a");
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           document.documentElement.style.setProperty("--background-color","#242142");
           document.documentElement.style.setProperty("--font-color", "#ededed");
+          document.documentElement.style.setProperty("--font-dark-color", "#3f3f3f");
           document.documentElement.style.setProperty("--language-bg-color", "#f2f2f2");
           document.documentElement.style.setProperty("--sec-background-color","#3a347a");
           document.documentElement.style.setProperty("--sec-background-light-color","#dfe6ee");

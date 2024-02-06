@@ -1,7 +1,7 @@
 <template>
     <div class="whyitgateway"  >
         <div class="bg-color"></div>
-        <div class="content">
+        <div class="content content-wrapper">
             <h2 class="mb-5">Why <br> itGateway ?</h2>
             
             <div class="collapse-item cursor-pointer">
@@ -58,7 +58,6 @@
 <style scoped>
 .whyitgateway {
     margin-top: 60px;
-    margin-bottom: 100px;
     height: 700px;
     background-image: url('@/assets/images/whyitGateway/itgateway.png');
     background-size: 100%;
@@ -81,7 +80,7 @@
     position: absolute;
     z-index: 99 !important;
     top: 15%;
-    left: 10%;
+    color: #ededed !important;
 }
 
 .whyitgateway h2 {
@@ -108,6 +107,7 @@
 
 .whyitgateway .content .more-report {
     position: relative;
+    color: #ededed !important;
 }
 
 .whyitgateway .content .more-report::before {
