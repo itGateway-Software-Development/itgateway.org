@@ -124,7 +124,7 @@
     }
 
     .grid-item span {
-        font-size: 3.25rem;
+        font-size: 3rem;
         font-weight: 800;
     }
  

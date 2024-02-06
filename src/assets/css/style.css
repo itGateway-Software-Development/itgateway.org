@@ -75,6 +75,10 @@
   user-select: none; /* Standard syntax */
 }
 
+.prevent-pointer {
+  pointer-events: none;
+}
+
 nav, nav .dropdown {
   padding: 10px 3%;
 }
