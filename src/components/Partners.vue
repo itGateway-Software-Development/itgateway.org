@@ -11,15 +11,19 @@
         <Vendor :currentTab="currentTab"/>
         <!-- if product partenrs  -->
         <Product :currentTab="currentTab" />
+        <!-- if solution partners  -->
+        <Solution :currentTab="currentTab" />
     </div>
 </template>
 
 <script>
+import Solution from './partners/Solution'
 import Product from './partners/Product'
 import Vendor from './partners/Vendor'
 import { ref } from 'vue'
     export default {
   components: {
+    Solution,
     Product, Vendor },
     setup() {
             const currentTab = ref('vendor');
@@ -33,7 +37,6 @@ import { ref } from 'vue'
 <style scoped>
     .partners {
         margin-top: 100px;
-        margin-bottom: 1000px;
     }
 
     .partners h2 {

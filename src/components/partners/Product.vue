@@ -1,5 +1,5 @@
 <template>
-    <div v-if="currentTab == 'product-partner'">
+    <div v-if="currentTab == 'product-partner'" class="product-partner">
         <div class="row">
             <div class="col-12 col-lg-4 convergent ">
                 <div class="d-flex justify-content-center mb-5">
@@ -12,7 +12,7 @@
             </div>
             <div class="col-12 col-lg-8 group py-3">
                 <div class="row">
-                    <div class="col-12 col-lg-6 mb-3">
+                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                         <div class="group-item">
                             <div class="d-flex justify-content-center w-100 mb-5">
                                 <img :src="require('@/assets/images/partners/pacific.png')" alt="">
@@ -25,7 +25,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 mb-3">
+                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                         <div class="group-item">
                             <div class="d-flex justify-content-center w-100 gd mb-5 ">
                                 <img :src="require('@/assets/images/partners/gd.png')" alt="">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="row sec-row">
-                    <div class="col-12 col-lg-6 mb-3">
+                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                         <div class="group-item">
                             <div class="d-flex justify-content-center w-100 mb-5">
                                 <img :src="require('@/assets/images/partners/vst.png')" alt="">
@@ -53,7 +53,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 mb-3">
+                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                         <div class="group-item">
                             <div class="d-flex justify-content-center sln w-100 mb-5">
                                 <img :src="require('@/assets/images/partners/sln.png')" alt="">
@@ -79,7 +79,7 @@
 </script>
 
 <style>
-    .convergent {
+    .product-partner .convergent {
         padding: 30px;
         background: linear-gradient(to bottom, #EC6316, #A22E76);
         color: #ededed;
@@ -89,12 +89,12 @@
         margin-top: 30px;
     }
 
-    .row a {
+    .product-partner .row a {
         position: relative;
         color: #ededed;
     }
 
-    .row a::before {
+    .product-partner .row a::before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -105,40 +105,40 @@
         transition: .3s ease;
     }
 
-    .row a:hover::before {
+    .product-partner .row a:hover::before {
         background: #EC6316;
         height: 3px;
     }
 
-    .group {
+    .product-partner .group {
         background: #d8d0d0;
     }
 
-    .group .group-item {
+    .product-partner .group .group-item {
         padding-bottom: 20px;
         background: var(--sec-background-color);
         padding: 10px;
         height: 100%;
     }
 
-    .group-item p, .group-item a{
+    .product-partner .group-item p, .group-item a{
         color: var(--font-color) !important;
     }
 
-    .group .group-item img {
+    .product-partner .group .group-item img {
         width: 50%;
         margin-top: 20px;
     }
 
-    .group .group-item .gd img {
+    .product-partner .group .group-item .gd img {
         width: 20%;
     }
 
-    .group .group-item .sln img {
+    .product-partner .group .group-item .sln img {
         width: 20%;
     }
 
-    .group .sec-row {
+    .product-partner .group .sec-row {
         margin-top: 20px;
     }
 </style>

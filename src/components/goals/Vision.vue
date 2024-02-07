@@ -1,0 +1,42 @@
+<template>
+    <div class="vision-img mb-5 position-relative">
+        <img class="w-100 h-100 object-fit-cover" :src="require('@/assets/images/goals/vision.jpg')" alt="">
+        <div class="header position-absolute d-flex align-items-center gap-2">
+            <img class="goal_icon" :src="require('@/assets/images/goals/vision_icon.png')" alt="">
+            <h3>Vision</h3>
+        </div>
+        <div class="vision-content">
+            <p class="text-justify">
+                To be the leading provider of exceptional IT services and products, renowned for our unrelenting dedication to providing round-the-clock support and outcomes that far surpass our customers' expectations. We strive to be leveraging the latest technologies and creative solutions to guarantee the exceptional quality.​
+            </p>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style>
+ .vision-mission .vision-img .header img {
+        width: 60px;
+    }
+
+    .vision-mission .vision-img .header h3 {
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    .vision-mission .vision-img .header {
+        top: 5%;
+        left: 5%;
+    }
+
+    .vision-mission .vision-content {
+        position: absolute;
+        top: 30%;
+        padding: 0px 5%;
+    }
+</style>

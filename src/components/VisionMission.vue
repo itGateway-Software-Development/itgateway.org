@@ -1,0 +1,58 @@
+<template>
+    <div class="vision-mission content-wrapper">
+        <h2 class="text-center">Vision, Mission & Goal</h2>
+        <div class="content">
+            <div class="row">
+                <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                    <Goal />
+                </div>
+                <div class="col-12 col-lg-6">
+                    <Vision />
+                    <Mission />
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</template>
+
+<script>
+    import Mission from './goals/Mission'
+import Vision from './goals/Vision'
+import Goal from './goals/Goal'
+export default {
+  components: {
+    Mission,
+    Vision, Goal },
+        
+    }
+</script>
+
+<style>
+    .vision-mission {
+        margin-top: 100px;
+        margin-bottom: 1000px;
+    }
+
+    .vision-mission h2 {
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 2.5rem;
+    }
+
+    .vision-mission .content {
+        margin-top: 40px;
+    }
+
+    .vision-mission .goal-img {
+        height: 750px;
+    }
+
+    .vision-mission .vision-img, .vision-mission .mission-img {
+        height: 365px;
+    }
+
+    .vision-mission h3, .vision-mission p {
+        color: #ededed;
+    }
+    
+</style>
