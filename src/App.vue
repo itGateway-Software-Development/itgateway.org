@@ -5,15 +5,18 @@
       <Loading v-if="loading" />
       <router-view />
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+import Footer from './components/Footer'
 import Navbar from "@/components/Navbar.vue";
 import Loading from "./components/Loading.vue";
 import { onMounted, ref } from 'vue';
 export default {
-  components: { Navbar, Loading },
+  components: {
+    Footer, Navbar, Loading },
   setup() {
     const loading = ref(true);
     const isHover = ref(false);

@@ -31,7 +31,6 @@ export default {
 <style>
     .vision-mission {
         margin-top: 100px;
-        margin-bottom: 1000px;
     }
 
     .vision-mission h2 {

@@ -34,6 +34,9 @@
   --language-bg-color: #f2f2f2;
   --language-bg-light-color : #dcdcdc;
 
+  --footer-background-color: #142142;
+  --footer-light-background-color: #c8d0d8;
+
 }
 
 #app {
