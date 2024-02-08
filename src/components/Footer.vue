@@ -12,7 +12,7 @@
                     <router-link to="#">Managements​</router-link>
                     <router-link to="#">Developments​</router-link> 
                     <router-link to="#">Trainings</router-link>
-                </div> 
+                </div>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <h4>Career</h4>
