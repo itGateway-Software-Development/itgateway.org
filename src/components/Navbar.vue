@@ -62,7 +62,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <nav class=" main-nav pt-0 position-relative">
+    <nav class=" main-nav pt-0 position-relative" :class="{active: isScroll}">
       <router-link to="#" class="menu service-group" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('service-group') }}
         <ServiceGroup />
@@ -88,7 +88,7 @@
 
 <script>
 import "@/assets/css/nav.css";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import Solutions from '@/components/navDropdown/Solutions';
 import ServiceGroup from '@/components/navDropdown/ServiceGroup';
@@ -106,6 +106,7 @@ export default {
     const dropdownContent = ref('cloud');
     const store = useStore();
     const language = ref('EN');
+    const isScroll = ref(false);
 
     const navigate = (route) => {
       router.push(route);
@@ -119,7 +120,17 @@ export default {
       store.dispatch('getLocale', lang);
     }
 
-      return { currentTheme,changeTheme, isSearch, drawer, navigate, dropdownContent, changeLanguage, language, menuHover}
+    const handleNavShadow = () => {
+      if(window.scrollY > 300) {
+        isScroll.value = true;
+      }
+    }
+
+    onMounted(() => {
+      window.addEventListener('scroll', handleNavShadow);
+    })
+
+      return { currentTheme,changeTheme, isSearch, drawer, navigate, dropdownContent, changeLanguage, language, menuHover, isScroll}
   }
 };
 </script>

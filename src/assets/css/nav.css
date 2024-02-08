@@ -26,6 +26,10 @@ nav.main-nav {
     justify-content: start;
 }
 
+nav.main-nav.active {
+    box-shadow: 5px 5px 5px #3a347a;
+}
+
 nav .mobile-menu-btn {
     display: none;
 }
