@@ -10,7 +10,7 @@
                     <router-link to="#">Infrastructure​</router-link>
                     <router-link to="#">Engineering​</router-link>
                     <router-link to="#">Managements​</router-link>
-                    <router-link to="#">Developments​</router-link>
+                    <router-link to="#">Developments​</router-link> 
                     <router-link to="#">Trainings</router-link>
                 </div>
             </div>
