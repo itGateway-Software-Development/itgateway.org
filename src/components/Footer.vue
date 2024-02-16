@@ -43,7 +43,7 @@
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="d-flex flex-column">
-                    <a href="" class="portal-btn">Customer Portal</a>
+                    <a href="" class="portal-btn primary-btn">Customer Portal</a>
                     <div class="social d-flex justify-content-between align-items-center mt-5">
                         <a href="https://www.facebook.com/ITGatewayTechnologyGroup" target="_blink"><img :src="require('@/assets/images/social/fb.png')" alt=""></a>
                         <a href="" target="_blink"><img :src="require('@/assets/images/social/youtube.png')" alt=""></a>
@@ -111,19 +111,15 @@ import { ref } from 'vue';
     }
 
     .footer .portal-btn {
-        background: linear-gradient(to right,#EC6316, #853a0f);
-        border-radius: 7px;
         text-align: center;
         padding: 10px 15px;
-        font-weight: bold;
+        font-weight: bold !important;
+        text-transform: uppercase;
         color: #ededed !important;
         transition: .5s ease;
+        font-size: 1.2rem !important;
+        border-radius: 0px 30px 0 30px !important;
     }
-
-    .footer .portal-btn:hover {
-        transform: translateY(-5px);
-    }
-
     .footer .content a {
         transition: .5s ease;
     }

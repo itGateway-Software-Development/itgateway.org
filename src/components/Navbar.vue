@@ -23,15 +23,17 @@
         <router-link to="" class="menu">{{ $t("contact") }}</router-link>
         <router-link to="" class="menu">{{ $t("about") }}</router-link>
         <router-link to="" class="menu d-flex align-items-center position-relative language-wrapper">
-          <span v-if="language == 'EN'" class="span-menu">ENGLISH</span>
+          <span v-if="language == 'EN'" class="span-menu">English</span>
           <span v-else class="span-menu">မြန်မာ</span>
           <i class="mdi mdi-menu-down"></i>
           <div class="language">
-            <button @click="changeLanguage('EN')">ENGLISH</button>
-            <button @click="changeLanguage('MM')">MYANMAR</button>
+            <button @click="changeLanguage('EN')">English</button>
+            <button @click="changeLanguage('MM')">Myanmar</button>
           </div>
         </router-link>
-        <a href="#" class="menu btn btn-sm main-btn menu-btn primary-btn">{{ $t('customer_portal') }}</a>
+        <div class="btn-wrapper">
+          <a href="#" class="menu btn btn-sm menu-btn primary-btn">{{ $t('customer_portal') }}</a>
+        </div>
         
         <!-- dark icon  -->
         <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon theme-icon" @click="changeTheme('dark')" :class="{'d-none': currentTheme == 'dark'}" >

@@ -1,12 +1,12 @@
 {
-    "contact" : "CONTACT",
-    "about" : "ABOUT",
-    "service-group" : "SERVICE GROUPS",
-    "solutions" : "SOLUTIONS",
-    "products": "PRODUCTS",
-    "blogs" : "BLOGS",
-    "partners": "PARTNERS",
-    "event" : "EVENT",
-    "careers" : "CAREERS",
-    "customer_portal" : "CUSTOMER PORTAL"
+    "contact" : "Contact",
+    "about" : "About",
+    "service-group" : "Service Groups",
+    "solutions" : "Solutions",
+    "products": "Products",
+    "blogs" : "Blogs",
+    "partners": "Partners",
+    "event" : "Events",
+    "careers" : "Careers",
+    "customer_portal" : "Customer Portal"
 }

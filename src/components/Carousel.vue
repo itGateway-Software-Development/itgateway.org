@@ -5,19 +5,19 @@
             <h2 class="mb-5">itGateway is the Fastest Growing Company in South East Asia</h2>
             <p class="mb-1 text-white">Up to <span class="special-text">8 Services Category Groups</span></p>
             <p class="text-white">Focus on Innovation Led by Young Research Engineers</p>
-            <button class="btn primary-btn bg-white d-flex gap-2 align-items-center">Find Out More <span class="material-symbols-outlined">east</span></button>
+            <button class="btn primary-btn d-flex gap-2 align-items-center">Find Out More <span class="material-symbols-outlined">east</span></button>
         </div>
         <div class="carousel-content" v-if="currentImageIndex == 1">
             <h2 class="mb-5">itGateway Cloud Infrastructure is to launch  in 2024</h2>
             <p class="mb-1 text-white">We are planning to offer the cloud services across the world</p>
             <p class="text-white">Explore additional offering in <span class="special-text">Managed Cloud Services</span></p>
-            <button class="btn primary-btn bg-white d-flex gap-2 align-items-center">Register Now <span class="material-symbols-outlined">east</span></button>
+            <button class="btn primary-btn d-flex gap-2 align-items-center">Register Now <span class="material-symbols-outlined">east</span></button>
         </div>
          <div class="carousel-content" v-if="currentImageIndex == 2">
             <h2 class="mb-5">Research is The Key to build the Innovation & Development.</h2>
             <p class="mb-1 text-white">We are trying a first innovation center of our group.</p>
             <p class="text-white"><span class="special-text">Learn, Research and Develop</span> for Our Customers</p>
-            <button class="btn primary-btn bg-white d-flex gap-2 align-items-center">Read More <span class="material-symbols-outlined">east</span></button>
+            <button class="btn primary-btn d-flex gap-2 align-items-center">Read More <span class="material-symbols-outlined">east</span></button>
         </div>
         <div class="indicator d-flex align-items-center gap-4">
             <span class="cursor-pointer text-white" :class="{active: currentImageIndex == 0}" @click="changeImageIndex(0)">Fastest Growing Company</span>
@@ -125,12 +125,8 @@ import { onMounted, ref } from 'vue'
     .carousel-content button {
         font-size: 1.3rem !important;
         font-weight: bold !important;
-        color: #EC6316 !important;
         margin-top: 40px !important;
         transition: .3s ease;
-    }
-
-    .carousel-content button:hover {
-        transform: translateY(-10px);
+        background: #ffffff09 !important;
     }
 </style>
