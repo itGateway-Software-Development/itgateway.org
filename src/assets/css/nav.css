@@ -37,7 +37,7 @@ nav .mobile-menu-btn {
  a.menu {
     font-size: 16px;
     letter-spacing: 0.03rem;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
     transition: .3s ease;
 }
 
@@ -215,12 +215,16 @@ nav .language button:hover {
     opacity: 0;
 }
 .menu:hover .dropdown{
-    height: 500px;
+    height: 600px;
     opacity: 1;
     color: var(--font-color);
     pointer-events: visible;
     overflow: visible;
 }
+
+.dropdown-content-row {
+    padding: 60px 10% ;
+  }
 
 .menu .dropdown .content {
     width: 100%;

@@ -20,9 +20,24 @@
             <button class="btn primary-btn d-flex gap-2 align-items-center">Read More <span class="material-symbols-outlined">east</span></button>
         </div>
         <div class="indicator d-flex align-items-center gap-4">
-            <span class="cursor-pointer text-white" :class="{active: currentImageIndex == 0}" @click="changeImageIndex(0)">Fastest Growing Company</span>
-            <span class="cursor-pointer text-white" :class="{active: currentImageIndex == 1}" @click="changeImageIndex(1)">Global Cloud Infracture</span>
-            <span class="cursor-pointer text-white" :class="{active: currentImageIndex == 2}" @click="changeImageIndex(2)">Research & Development</span>
+            <div class="d-flex flex-column">
+                <span class="cursor-pointer text-white" @click="changeImageIndex(0)">Fastest Growing Company</span>
+                <div class="progress-bar" v-if="currentImageIndex == 0">
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="d-flex flex-column">
+                <span class="cursor-pointer text-white" @click="changeImageIndex(1)">Global Cloud Infracture</span>
+                <div class="progress-bar" v-if="currentImageIndex == 1">
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="d-flex flex-column">
+                <span class="cursor-pointer text-white" @click="changeImageIndex(2)">Research & Development</span>
+                <div class="progress-bar" v-if="currentImageIndex == 2">
+                    <div class="fill"></div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -42,6 +57,7 @@ import { onMounted, ref } from 'vue'
     
             const currentImageIndex = ref(0);
             const currentImage = ref(images[currentImageIndex.value])
+            const duration = 6000;
 
             const slider = () => {
                 if(currentImageIndex.value < images.length -1) {
@@ -53,18 +69,19 @@ import { onMounted, ref } from 'vue'
                 currentImage.value = images[currentImageIndex.value]
             }
 
+
             const changeImageIndex = (index) => {
                 currentImageIndex.value = index;
                 currentImage.value = images[currentImageIndex.value];
 
                  // Clear the existing interval and set a new one
                 clearInterval(intervalId);
-                intervalId = setInterval(slider, 6000);
+                intervalId = setInterval(slider, duration);
             }
 
             onMounted(() => {
                 // Set the initial interval
-                intervalId = setInterval(slider, 6000);
+                intervalId = setInterval(slider, duration);
             })
 
             return {currentImage, currentImageIndex, changeImageIndex}
@@ -94,7 +111,7 @@ import { onMounted, ref } from 'vue'
     }
 
     .carousel-wrapper .indicator .active {
-        border: 2px dotted #f2f2f2;
+        border-bottom: 2px solid #7c7c7c;
         padding: 5px 10px;
     }
 
@@ -107,7 +124,7 @@ import { onMounted, ref } from 'vue'
 
     .carousel-content h2 {
         font-family: 'Chakra Petch', sans-serif;
-        font-size: 3.25rem;
+        font-size: 48px;
         letter-spacing: 0.007rem;
         color: #fff;
     }
@@ -129,4 +146,27 @@ import { onMounted, ref } from 'vue'
         transition: .3s ease;
         background: #ffffff09 !important;
     }
+
+    .progress-bar {
+        position: relative;
+        width: 100%;
+        height: 3px;
+        background-color: #a7a4a4; 
+      }
+    
+      .fill {
+        height: 100%;
+        background-color: #ffffff; 
+        animation: fillAnimation 6s infinite; 
+      }
+
+      @keyframes fillAnimation {
+        from {
+          width: 0%; 
+        }
+        to {
+          width: 100%; 
+        }
+      }
+    
 </style>
