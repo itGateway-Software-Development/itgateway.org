@@ -1,6 +1,5 @@
 <template>
     <div class="content-wrapper success-story-wrapper">
-        <!-- <h2>Success Story</h2> -->
         <div class="stories">
             <div class="row">
                 <div class="col mx-auto">
@@ -74,10 +73,6 @@
         margin-top: 60px;
     }
 
-    .success-story-wrapper h2 {
-        font-size: 2rem;
-    }
-
     .stories {
         margin-top: 60px;
     }
@@ -124,8 +119,11 @@
     }
 
     .grid-item span {
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 800;
     }
  
+    .grid-item p {
+        font-size: 20px;
+    }
 </style>

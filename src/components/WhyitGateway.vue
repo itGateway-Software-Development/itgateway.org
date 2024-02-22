@@ -105,6 +105,11 @@
     height: 30px;
 }
 
+.whyitgateway .content .collapsable a {
+    color: #ededed !important;
+    font-size: 18px;
+}
+
 .whyitgateway .content .more-report {
     position: relative;
     color: #ededed !important;

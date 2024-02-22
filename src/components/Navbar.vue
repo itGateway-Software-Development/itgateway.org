@@ -125,6 +125,8 @@ export default {
     const handleNavShadow = () => {
       if(window.scrollY > 300) {
         isScroll.value = true;
+      } else {
+        isScroll.value = false;
       }
     }
 

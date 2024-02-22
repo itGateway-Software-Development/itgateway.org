@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
           document.documentElement.style.setProperty("--font-color", "#ededed");
           document.documentElement.style.setProperty("--font-dark-color", "#3f3f3f");
           document.documentElement.style.setProperty("--language-bg-color", "#f2f2f2");
-          document.documentElement.style.setProperty("--sec-background-color","#3a347a");
+          document.documentElement.style.setProperty("--sec-background-color","#302d58");
           document.documentElement.style.setProperty("--sec-background-light-color","#dfe6ee");
           document.documentElement.style.setProperty("--background-light-color", "#f2f3f4");
           document.documentElement.style.setProperty("--sec-font-color","#A22E76");

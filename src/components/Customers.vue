@@ -5,10 +5,10 @@
             We are empowering your vision and elevating your success. Most of the customers trusted our leading technology solutions, services, supports and innovation system.
         </p>
         <div class="customer-logo d-flex flex-wrap align-items-center">
-            <div class="img" v-for="i in 10" :key="i">
+            <div class="img" v-for="i in 11" :key="i">
                 <img :src="require(`@/assets/images/customers/${i}.png`)" alt="">
             </div>
-            <div class="img" v-for="i in 14" :key="i">
+            <div class="img" v-for="i in 25" :key="i">
                 <img :src="require(`@/assets/images/customers/${i}.jpg`)" alt="">
             </div>
         </div>
@@ -36,16 +36,16 @@
     }
 
     .customer-logo {
-        gap: 40px;
+        gap: 45px;
         margin-top: 40px;
     }
 
     .customer-logo .img {
-        background: #fff;
+        background: var(--sec-background-color);
         border-radius: 10px;
         padding: 10px;
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 
     .customer-logo img{

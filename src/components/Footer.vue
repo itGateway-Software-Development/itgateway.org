@@ -115,9 +115,7 @@ import { ref } from 'vue';
         padding: 10px 15px;
         font-weight: bold !important;
         text-transform: uppercase;
-        color: #ededed !important;
         transition: .5s ease;
-        font-size: 1.2rem !important;
         border-radius: 0px 30px 0 30px !important;
     }
     .footer .content a {

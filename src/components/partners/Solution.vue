@@ -14,7 +14,7 @@
             <div class="col-12 col-lg-7 group">
                 <div class="row">
                     <div class="col-12 col-lg-6 pe-0">
-                        <div class="group-item">
+                        <div class="group-item position-relative">
                             <div class="d-flex justify-content-center mb-5">
                                 <img :src="require('@/assets/images/partners/mit.png')" alt="">
                             </div>
@@ -25,7 +25,7 @@
                             <p>
                                 We are providing MIT to become the cloud based ERP & POS solution for many business and organizations.​
                             </p>
-                            <button class="primary-btn btn px-5">Read More</button>
+                            <button class="primary-btn btn px-5 position-absolute" style="bottom: 20px;">Read More</button>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -72,14 +72,14 @@
     }
 
     .solution-partner .group {
-        background: #d8d0d0;
+        background: var(--sec-background-color);
         padding: 10px;
     }
 
     .solution-partner .group .group-item {
         padding: 20px 10px;
-        background: var(--sec-background-color);
-        height: 100%;
+        background: var(--background-color);
+        height: 450px;
     }
 
     .solution-partner .group .group-item img {
@@ -87,7 +87,7 @@
     }
 
     .solution-partner .group .group-item .itg-img img {
-        width: 25%;
+        width: 22%;
     }
 
     .solution-partner .group .group-item h3 {

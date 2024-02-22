@@ -42,7 +42,7 @@
                 <div class="row sec-row">
                     <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                         <div class="group-item">
-                            <div class="d-flex justify-content-center w-100 mb-5">
+                            <div class="d-flex justify-content-center w-100 vst mb-5">
                                 <img :src="require('@/assets/images/partners/vst.png')" alt="">
                             </div>
                             <p class="text-justify">
@@ -111,12 +111,12 @@
     }
 
     .product-partner .group {
-        background: #d8d0d0;
+        background: var(--sec-background-color);
     }
 
     .product-partner .group .group-item {
         padding-bottom: 20px;
-        background: var(--sec-background-color);
+        background: var(--background-color);
         padding: 10px;
         height: 100%;
     }
@@ -135,6 +135,10 @@
     }
 
     .product-partner .group .group-item .sln img {
+        width: 18%;
+    }
+
+    .product-partner .group .group-item .vst img {
         width: 20%;
     }
 

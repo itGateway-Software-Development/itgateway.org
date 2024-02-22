@@ -27,7 +27,7 @@ nav.main-nav {
 }
 
 nav.main-nav.active {
-    box-shadow: 5px 5px 5px #3a347a;
+    box-shadow: 5px 5px 5px var(--sec-background-color);
 }
 
 nav .mobile-menu-btn {

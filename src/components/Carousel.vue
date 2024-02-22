@@ -140,11 +140,12 @@ import { onMounted, ref } from 'vue'
     }
 
     .carousel-content button {
-        font-size: 1.3rem !important;
         font-weight: bold !important;
         margin-top: 40px !important;
         transition: .3s ease;
         background: #ffffff09 !important;
+        border: 2px solid #ededed !important;
+        color: #ededed !important;
     }
 
     .progress-bar {
