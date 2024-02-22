@@ -113,6 +113,7 @@
     .product-partner .group {
         background: var(--sec-background-color);
     }
+    
 
     .product-partner .group .group-item {
         padding-bottom: 20px;
