@@ -6,13 +6,18 @@
     background: var(--background-color);
 }
 nav .logo {
-    width: 4rem;
-    height: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .logo h5 {
+    color: #EC6316;
 }
 
 nav .logo img {
-    width: 100%;
-    height: 100%;
+    width: 4rem;
+    height: 4rem;
 }
 
 nav .top-menu {
@@ -24,6 +29,7 @@ nav .top-menu {
 nav.main-nav {
     display: flex;
     justify-content: start;
+    margin-top: 10px;
 }
 
 nav.main-nav.active {
@@ -56,12 +62,12 @@ nav .span-menu:hover {
 }
 
 nav .menu-btn {
-    margin-right: 1rem;
+    margin-right: 16px;
 }
 
 nav .menu-icon {
-    margin-right: 1rem;
-    font-size: 1.8rem;
+    margin-right: 16px;
+    font-size: 28.8px;
 }
 
 nav .dark-icon {
@@ -254,6 +260,12 @@ nav .language button:hover {
 /* =============================
     breakponts
 ===============================*/
+@media (max-width: 1500px) {
+    .menu:hover .dropdown{
+        height: 450px;
+    }
+}
+
 @media (max-width: 768px) {
     nav .top-menu, nav.main-nav {
         display: none !important;
@@ -261,6 +273,86 @@ nav .language button:hover {
 
     nav .mobile-menu-btn {
         display: block;
+    }
+}
+
+@media(max-width: 1350px) {
+    nav .search-input {
+        right: 52px;
+        height: 30px;
+    }
+
+    nav .search-input.searching {
+        width: 350px;
+    }
+
+    nav .search-bar-icon {
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav .logo h5 {
+        font-size: 16px;
+    }
+    
+    nav .logo img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    a.menu {
+        font-size: 15px;
+        padding-right: 1.5rem;
+    }
+
+    nav .span-menu {
+        font-size: 15px;
+    }
+
+    nav .dark-icon {
+        font-size: 26px;
+    }
+}
+
+@media(max-width: 1070px) {
+    nav .search-input.searching {
+        width: 250px;
+    }
+
+    nav .search-input {
+        font-size: 16px;
+    }
+
+    .menu:hover .dropdown{
+        height: 500px;
+    }
+
+    .menu .dropdown ul.multi {
+        width: 17%;
+    }
+}
+
+@media(max-width: 960px) {
+    nav .search-input {
+        right: 52px;
+        height: 25px;
+    }
+
+    nav .search-input.searching {
+        width: 180px;
+    }
+
+    nav .search-bar-icon {
+        height: 25px;
+        line-height: 25px;
+    }
+}
+
+@media(max-width: 890px) {
+    nav .search-input.searching {
+        width:280px;
     }
 }
 

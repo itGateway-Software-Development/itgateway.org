@@ -1,6 +1,6 @@
 <template>
     <div v-if="currentTab == 'solution-partner'" class="solution-partner">
-        <div class="row">
+        <div class="row px-3 px-lg-0">
             <div class="col-12 col-lg-5 asia-matrix">
                 <div class="d-flex justify-content-center mb-5">
                     <img :src="require('@/assets/images/partners/asia_matrix.png')" alt="">
@@ -13,7 +13,7 @@
             </div>
             <div class="col-12 col-lg-7 group">
                 <div class="row">
-                    <div class="col-12 col-lg-6 pe-0">
+                    <div class="col-12 col-md-6 pe-md-0 mb-3">
                         <div class="group-item position-relative">
                             <div class="d-flex justify-content-center mb-5">
                                 <img :src="require('@/assets/images/partners/mit.png')" alt="">
@@ -28,7 +28,7 @@
                             <button class="primary-btn btn px-5 position-absolute" style="bottom: 20px;">Read More</button>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6">
                         <div class="group-item position-relative">
                             <div class="d-flex justify-content-center mb-5 itg-img">
                                 <img :src="require('@/assets/images/partners/itg.png')" alt="">
@@ -102,5 +102,12 @@
 
     .solution-partner .view-program a:hover {
         transform: translateX(10px);
+    }
+
+    @media(max-width: 1200px) {
+        .solution-partner .group .group-item h3 {
+            height: 70px;
+            font-size: 20px;
+        }
     }
 </style>

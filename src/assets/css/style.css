@@ -54,13 +54,19 @@
   color: var(--font-color);
 }
 
+#app .section-header {
+  background: linear-gradient(99deg,#EC6316 3%,#ff6600 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #app .primary-btn {
   background: transparent;
   border: 2px solid var(--font-color);
   border-radius: 0px 18px 0 18px;
   color: var(--font-color);
-  font-size: .9rem;
-  letter-spacing: .05rem;
+  font-size: 15px;
+  letter-spacing: 0.03rem;
   transition: .5s ease;
   font-weight: 550;
   position: relative;
@@ -136,7 +142,41 @@ nav, nav .dropdown {
     Mobile Menu Drawer
 ==========================*/
 #drawer {
-    width: 90% !important;
+    width: 80% !important;
+}
+
+
+/* ========================
+    Responsive
+==========================*/
+@media (max-width: 1825px) {
+  .content-wrapper {
+    padding: 10px 13%;
+  }
+}
+
+@media (max-width: 1200px) {
+  *{
+    font-size: 15px;
+  }
+  .content-wrapper {
+    padding: 10px 9%;
+  }
+
+  #app .primary-btn {
+    font-size: 13px;
+  }
+
+  #app .section-header {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-wrapper {
+    padding: 10px 3%;
+  }
+
 }
 
 

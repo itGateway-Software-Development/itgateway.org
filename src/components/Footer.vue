@@ -1,8 +1,8 @@
 <template>
     <div class="footer content-wrapper py-5">
-        <div class="row d-flex justify-content-between">
-            <div class="col-6 col-md-4 col-lg-2">
-                <h4>Services</h4>
+        <div class="row d-flex justify-content-center justify-content-md-between">
+            <div class="col-5 col-md-3 col-lg-2 mb-5">
+                <h4 class="section-header">Services</h4>
                 <div class="content">
                     <router-link to="#">Cloud​</router-link>
                     <router-link to="#">Applications​</router-link>
@@ -14,16 +14,16 @@
                     <router-link to="#">Trainings</router-link>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <h4>Career</h4>
+            <div class="col-5 col-md-3 col-lg-2 mb-5">
+                <h4 class="section-header">Career</h4>
                 <div class="content">
                     <router-link to="#">View All Jobs​</router-link>
                     <router-link to="#">Development Programs</router-link>
                     <router-link to="#">Internship Programs</router-link>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <h4>About Us</h4>
+            <div class="col-5 col-md-3 col-lg-2 mb-5">
+                <h4 class="section-header">About Us</h4>
                 <div class="content">
                     <router-link to="#">Contact Us</router-link>
                     <router-link to="#">Event</router-link>
@@ -32,8 +32,8 @@
                     <router-link to="#">Business Insight</router-link>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <h4>Innovation​</h4>
+            <div class="col-5 col-md-3 col-lg-2 mb-5">
+                <h4 class="section-header">Innovation​</h4>
                 <div class="content">
                     <router-link to="#">R&D Centers</router-link>
                     <router-link to="#">Trainings</router-link>
@@ -41,14 +41,15 @@
                     <router-link to="#">Data Analysis</router-link>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <hr class="d-block d-md-none">
+            <div class="col-md-12 col-lg-3 mb-5">
                 <div class="d-flex flex-column">
                     <a href="" class="portal-btn primary-btn">Customer Portal</a>
-                    <div class="social d-flex justify-content-between align-items-center mt-5">
-                        <a href="https://www.facebook.com/ITGatewayTechnologyGroup" target="_blink"><img :src="require('@/assets/images/social/fb.png')" alt=""></a>
-                        <a href="" target="_blink"><img :src="require('@/assets/images/social/youtube.png')" alt=""></a>
-                        <a href="" target="_blink"><img :src="require('@/assets/images/social/linkedin.png')" alt=""></a>
-                        <a href="" target="_blink"><img :src="require('@/assets/images/social/ig.png')" alt=""></a>
+                    <div class="social d-flex justify-content-center gap-5 align-items-center mt-5">
+                        <a href="https://www.facebook.com/ITGatewayTechnologyGroup" target="_blink"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="" target="_blink"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="" target="_blink"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="" target="_blink"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                     <p class="text-justify mt-5">
                         We are an outstanding provider of IT services founded in 2019 by a dynamic young founder who assembled a group of professionals with a service-oriented approach.​
@@ -64,8 +65,8 @@
             </div>
         </div>
     </div>
-    <div class="copy-right d-flex justify-content-between align-items-center content-wrapper py-5">
-        <div>
+    <div class="copy-right d-flex flex-column flex-md-row justify-content-between align-items-center content-wrapper py-5">
+        <div class="mb-3 mb-md-0">
             &copy; Copyright <b>itGateway Technology Group Ltd. </b>All Rights Reserved.
         </div>
         <div>
@@ -131,7 +132,32 @@ import { ref } from 'vue';
         color: #EC6316 !important;
     }
 
+    .footer .social i {
+        font-size: 30px;
+        transition: .4s ease;
+    }
+
+    .footer .social i:hover {
+        color: #EC6316;
+    }
+
     #app > div > div > div.copy-right.d-flex.justify-content-between.align-items-center.content-wrapper.py-5 {
         background: var(--footer-background-color);
+    }
+
+    @media(max-width: 1150px) {
+        .footer h4 {
+            font-size: 23px !important;
+        }
+    }
+
+    @media(max-width: 680px) {
+
+    }
+
+    @media(max-width: 570px) {
+        .footer h4 {
+            font-size: 20px !important;
+        }
     }
 </style>

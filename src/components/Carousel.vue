@@ -1,5 +1,6 @@
 <template>
     <div class="carousel-wrapper">
+        <div class="carousel-bg-color"></div>
         <img :src="currentImage" alt="">
         <div class="carousel-content" v-if="currentImageIndex == 0">
             <h2 class="mb-5">itGateway is the Fastest Growing Company in South East Asia</h2>
@@ -21,19 +22,19 @@
         </div>
         <div class="indicator d-flex align-items-center gap-4">
             <div class="d-flex flex-column">
-                <span class="cursor-pointer text-white" @click="changeImageIndex(0)">Fastest Growing Company</span>
+                <span class="cursor-pointer text-white text-slide" @click="changeImageIndex(0)">Fastest Growing Company</span>
                 <div class="progress-bar" v-if="currentImageIndex == 0">
                     <div class="fill"></div>
                 </div>
             </div>
             <div class="d-flex flex-column">
-                <span class="cursor-pointer text-white" @click="changeImageIndex(1)">Global Cloud Infracture</span>
+                <span class="cursor-pointer text-white text-slide" @click="changeImageIndex(1)">Global Cloud Infracture</span>
                 <div class="progress-bar" v-if="currentImageIndex == 1">
                     <div class="fill"></div>
                 </div>
             </div>
             <div class="d-flex flex-column">
-                <span class="cursor-pointer text-white" @click="changeImageIndex(2)">Research & Development</span>
+                <span class="cursor-pointer text-white text-slide" @click="changeImageIndex(2)">Research & Development</span>
                 <div class="progress-bar" v-if="currentImageIndex == 2">
                     <div class="fill"></div>
                 </div>
@@ -97,6 +98,16 @@ import { onMounted, ref } from 'vue'
         margin-top: 112px;
     }
 
+    .carousel-wrapper .carousel-bg-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #a22e75 0%, #ec6416d3 60%, #f2f2f200);
+        z-index: 0 !important;
+    }
+
     .carousel-wrapper img {
         width: 100%;
         height: 100%;
@@ -130,13 +141,13 @@ import { onMounted, ref } from 'vue'
     }
 
     .carousel-content .special-text {
-        color: #A22E76;
+        color: #EC6316;
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
     .carousel-content p {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
     .carousel-content button {
@@ -155,19 +166,144 @@ import { onMounted, ref } from 'vue'
         background-color: #a7a4a4; 
       }
     
-      .fill {
+    .fill {
         height: 100%;
         background-color: #ffffff; 
         animation: fillAnimation 6s infinite; 
-      }
+    }
 
-      @keyframes fillAnimation {
+    @keyframes fillAnimation {
         from {
-          width: 0%; 
+        width: 0%; 
         }
         to {
-          width: 100%; 
+        width: 100%; 
         }
-      }
-    
+    }
+
+    @media(max-width: 1510px) {
+        .carousel-content h2 {
+            font-size: 40px;
+        }
+        .carousel-content p {
+            font-size: 20px;
+        }
+
+        .carousel-content .special-text {
+            font-size: 22px;
+        }
+    }
+
+    @media(max-width: 1200px) {
+        .carousel-wrapper {
+            height: 500px;
+        }
+        .carousel-content h2 {
+            font-size: 35px;
+        }
+        .carousel-content p {
+            font-size: 18px;
+        }
+
+        .carousel-content .special-text {
+            font-size: 20px;
+        }
+
+        .carousel-content button {
+           padding: 3px 10px;
+        }
+    }
+
+    @media (max-width: 1110px) {
+        .carousel-wrapper .carousel-content {
+            width: 60%;
+        }
+    }
+
+    @media (max-width: 925px) {
+        .carousel-wrapper .carousel-content {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .carousel-wrapper {
+            height: 450px;
+        }
+        .carousel-content h2 {
+            font-size: 30px;
+        }
+        .carousel-content p {
+            font-size: 16px;
+        }
+
+        .carousel-content .special-text {
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .carousel-wrapper {
+            height: 400px;
+            margin-top: 20px;
+
+        }
+        .carousel-content h2 {
+            font-size: 25px;
+        }
+        .carousel-content p {
+            font-size: 16px;
+        }
+        .indicator .text-slide {
+            font-size: 12px;
+        }
+
+        .progress-bar {
+            height: 2px;
+          }
+    }
+
+    @media (max-width: 600px) {
+        .carousel-wrapper .carousel-content {
+            width: 60%;
+        }
+        .carousel-content h2 {
+            font-size: 20px;
+        }
+        .carousel-content p {
+            font-size: 15px;
+        }
+
+        .carousel-content .special-text {
+            font-size: 15px;
+        }
+        .carousel-content button {
+            font-size:11px !important;
+            border: 1px solid #ededed !important;
+         }
+
+        .carousel-content .material-symbols-outlined {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .carousel-wrapper .carousel-content {
+            width: 90%;
+        }
+
+        .carousel-content h2 {
+            font-size: 18px;
+        }
+        .carousel-content p {
+            font-size: 13px;
+        }
+
+        .carousel-content .special-text {
+            font-size: 14px;
+        }
+        .carousel-content button {
+            margin-top: 10px !important; 
+         }
+    }
 </style>

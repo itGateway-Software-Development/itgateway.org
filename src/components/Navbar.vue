@@ -4,6 +4,7 @@
     <div class="d-flex justify-content-between align-items-center">
       <div class="logo">
         <img :src="require('@/assets/images/logo.png')" alt="">
+        <h5 class="mt-2">itGateway <br> Technology Group</h5>
       </div>
 
       <!-- mobile menu button  -->
@@ -16,7 +17,7 @@
       <div class="top-menu ">
         <span  class=" search-input-wrapper d-inline-flex" :class="{searching: isSearch}">
             <input type="text" class="search-input" placeholder="search ....." :class="{'searching' : isSearch}">
-            <span class="material-symbols-outlined icon cursor-pointer search-bar-icon prevent-select" :class="{'searching' : isSearch}" ref="searchIcon"  @click="isSearch = !isSearch">
+            <span class="material-symbols-outlined icon cursor-pointer search-bar-icon prevent-select" :class="{'searching' : isSearch}" ref="searchIcon"  @click="handleSearch">
               search
             </span>
         </span>
@@ -130,11 +131,21 @@ export default {
       }
     }
 
+    const handleSearch = () => {
+      isSearch.value = !isSearch.value;
+      const browserWidth = window.innerWidth;
+      if(browserWidth < 890 && browserWidth > 768 && isSearch.value) {
+        document.querySelector('.logo').classList.add('opacity-0')
+      } else {
+        setTimeout(() => document.querySelector('.logo').classList.remove('opacity-0'), 500)
+      }
+    }
+
     onMounted(() => {
       window.addEventListener('scroll', handleNavShadow);
     })
 
-      return { currentTheme,changeTheme, isSearch, drawer, navigate, dropdownContent, changeLanguage, language, menuHover, isScroll}
+      return { currentTheme,changeTheme, isSearch, drawer, navigate, dropdownContent, changeLanguage, language, menuHover, isScroll, handleSearch}
   }
 };
 </script>

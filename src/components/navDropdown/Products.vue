@@ -66,7 +66,6 @@
   }
 
   .dropdown-content:hover {
-    border: 1px solid var(--main-color);
     transform: translateY(-5px);
   }
 
@@ -76,6 +75,25 @@
 
   .dropdown-content img {
     width: 100px;
+  }
+
+  @media (max-width: 1500px) {
+    .dropdown-content img {
+      width: 80px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .dropdown-content{
+      padding: 0px 10px 20px;
+    }
+
+    .dropdown-content img {
+      width: 60px;
+    }
+    .dropdown-content h5 {
+      font-size: 16px;
+    }
   }
 </style>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="partners content-wrapper">
-        <h2 class="text-center">itGateway Partners</h2>
-        <div class="tabs d-flex justify-content-center align-items-center gap-5">
+        <h2 class="text-center section-header">itGateway Partners</h2>
+        <div class="tabs d-flex justify-content-center align-items-center">
             <span :class="{active: currentTab == 'vendor'}" @click="currentTab = 'vendor'">Vendors</span>
             <span :class="{active: currentTab == 'product-partner'}" @click="currentTab = 'product-partner'">Product Partners</span>
             <span :class="{active: currentTab == 'solution-partner'}" @click="currentTab = 'solution-partner'">Solution Partners</span>
@@ -47,10 +47,11 @@ import { ref } from 'vue'
     .partners .tabs {
         margin-top: 35px;
         margin-bottom: 80px;
+        gap: 35px;
     }
 
     .partners .tabs span {
-        font-size: 1.5rem;
+        font-size: 24px;
         cursor: pointer;
         position: relative;
     }
@@ -70,7 +71,40 @@ import { ref } from 'vue'
         background: var(--main-color);
     }   
 
-    
+    @media(max-width: 1200px) {
+        .partners .tabs span {
+            font-size: 20px;
+        }
 
+        .partners .tabs span.active::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: -10%;
+            width: 120%;
+            height: 3px;
+            background: var(--main-color);
+        }   
+    }
+
+    @media(max-width: 550px) {
+        .partners .tabs {
+            gap: 25px;
+        }
+
+        .partners .tabs span {
+            font-size: 18px;
+        }
+    }
+
+    @media(max-width: 450px) {
+        .partners .tabs {
+            gap: 15px;
+        }
+
+        .partners .tabs span {
+            font-size: 14px;
+        }
+    }
    
 </style>

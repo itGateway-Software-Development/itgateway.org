@@ -1,12 +1,12 @@
 <template>
     <div class="vision-mission content-wrapper">
-        <h2 class="text-center">Vision, Mission & Goal</h2>
+        <h2 class="text-center section-header">Vision, Mission & Goal</h2>
         <div class="content">
             <div class="row">
-                <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                <div class="col-12 col-sm-6 mb-3 mb-lg-0">
                     <Goal />
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-sm-6">
                     <Vision />
                     <Mission />
                 </div>
@@ -43,15 +43,31 @@ export default {
     }
 
     .vision-mission .goal-img {
-        height: 750px;
+        height: 650px;
     }
 
     .vision-mission .vision-img, .vision-mission .mission-img {
-        height: 365px;
+        height: 315px;
     }
 
     .vision-mission h3, .vision-mission p {
         color: #ededed;
+    }
+
+    @media(max-width: 1200px) {
+        .vision-mission .goal-img {
+            height: 550px;
+        }
+    
+        .vision-mission .vision-img, .vision-mission .mission-img {
+            height: 265px;
+        }
+    }
+
+    @media(max-width: 570px) {
+        .vision-mission .goal-img {
+            height: 450px;
+        }
     }
     
 </style>

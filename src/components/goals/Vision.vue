@@ -1,9 +1,9 @@
 <template>
     <div class="vision-img mb-5 position-relative">
-        <img class="w-100 h-100 object-fit-cover" :src="require('@/assets/images/goals/vision.jpg')" alt="">
+        <img class="w-100 h-100 object-fit-cover bg-img" :src="require('@/assets/images/goals/vision.jpg')" alt="">
         <div class="header position-absolute d-flex align-items-center gap-2">
             <img class="goal_icon" :src="require('@/assets/images/goals/vision_icon.png')" alt="">
-            <h3>Vision</h3>
+            <h3 class="section-header">Vision</h3>
         </div>
         <div class="vision-content">
             <p class="text-justify">
@@ -20,13 +20,17 @@
 </script>
 
 <style>
- .vision-mission .vision-img .header img {
-        width: 60px;
+    .vision-mission .vision-img .bg-img {
+        filter: brightness(.7);
+    }
+    .vision-mission .vision-img .header img {
+        width: 40px;
     }
 
     .vision-mission .vision-img .header h3 {
-        font-size: 2.2rem;
+        font-size: 40px;
         font-weight: bold;
+        margin-top: 10px;
     }
 
     .vision-mission .vision-img .header {
@@ -38,5 +42,20 @@
         position: absolute;
         top: 30%;
         padding: 0px 5%;
+    }
+
+    @media(max-width: 1200px) {
+        .vision-mission .vision-img .header h3 {
+            font-size: 27px !important;
+        }
+
+        .vision-mission .vision-img .header img {
+            width: 30px;
+        }
+    }
+    @media(max-width: 950px) {
+        .vision-mission .vision-img .header h3 {
+            font-size: 24px !important;
+        }
     }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div v-if="currentTab == 'product-partner'" class="product-partner">
-        <div class="row">
-            <div class="col-12 col-lg-4 convergent ">
+        <div class="row px-2 px-lg-0">
+            <div class="col-12 col-lg-4 convergent">
                 <div class="d-flex justify-content-center mb-5">
                     <img :src="require('@/assets/images/partners/convergent.png')" alt="">
                 </div>
@@ -12,7 +12,7 @@
             </div>
             <div class="col-12 col-lg-8 group py-3">
                 <div class="row">
-                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                    <div class="col-12 col-md-6 mb-3 mb-lg-0">
                         <div class="group-item">
                             <div class="d-flex justify-content-center w-100 mb-5">
                                 <img :src="require('@/assets/images/partners/pacific.png')" alt="">
@@ -25,7 +25,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                    <div class="col-12 col-md-6 mb-3 mb-lg-0">
                         <div class="group-item">
                             <div class="d-flex justify-content-center w-100 gd mb-5 ">
                                 <img :src="require('@/assets/images/partners/gd.png')" alt="">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="row sec-row">
-                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                    <div class="col-12 col-md-6 mb-3 mb-lg-0">
                         <div class="group-item">
                             <div class="d-flex justify-content-center w-100 vst mb-5">
                                 <img :src="require('@/assets/images/partners/vst.png')" alt="">
@@ -53,7 +53,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                    <div class="col-12 col-md-6 mb-3 mb-lg-0">
                         <div class="group-item">
                             <div class="d-flex justify-content-center sln w-100 mb-5">
                                 <img :src="require('@/assets/images/partners/sln.png')" alt="">
