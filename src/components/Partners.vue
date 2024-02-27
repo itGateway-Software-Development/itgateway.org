@@ -1,18 +1,20 @@
 <template>
     <div class="partners content-wrapper">
-        <h2 class="text-center section-header">itGateway Partners</h2>
-        <div class="tabs d-flex justify-content-center align-items-center">
-            <span :class="{active: currentTab == 'vendor'}" @click="currentTab = 'vendor'">Vendors</span>
-            <span :class="{active: currentTab == 'product-partner'}" @click="currentTab = 'product-partner'">Product Partners</span>
+        <h2 class="text-center section-header" data-aos="zoom-out">itGateway Partners</h2>
+        <div class="tabs d-flex justify-content-center align-items-center" data-aos="flip-up">
+            <span :class="{active: currentTab == 'vendor'}" @click="currentTab = 'vendor'" >Vendors</span>
+            <span :class="{active: currentTab == 'product-partner'}" @click="currentTab = 'product-partner'" >Product Partners</span>
             <span :class="{active: currentTab == 'solution-partner'}" @click="currentTab = 'solution-partner'">Solution Partners</span>
         </div>
 
-        <!-- if vendor partners -->
-        <Vendor :currentTab="currentTab"/>
-        <!-- if product partenrs  -->
-        <Product :currentTab="currentTab" />
-        <!-- if solution partners  -->
-        <Solution :currentTab="currentTab" />
+        <transition name="switch" mode="out-in">
+            <!-- if vendor partners -->
+            <Vendor v-if="currentTab == 'vendor'" />
+            <!-- if product partenrs  -->
+            <Product v-else-if="currentTab == 'product-partner'" />
+            <!-- if solution partners  -->
+            <Solution v-else />
+        </transition>
     </div>
 </template>
 
@@ -70,6 +72,23 @@ import { ref } from 'vue'
         height: 5px;
         background: var(--main-color);
     }   
+
+    .switch-enter-from, .switch-leave-to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    .switch-enter-to, .switch-leave-from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .switch-enter-active {
+        transition: all .5s ease;
+    }
+     .switch-leave-active {
+        transition: all .5s ease;
+    }
 
     @media(max-width: 1200px) {
         .partners .tabs span {

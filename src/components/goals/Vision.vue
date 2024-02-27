@@ -1,5 +1,5 @@
 <template>
-    <div class="vision-img mb-5 position-relative">
+    <div class="vision-img mb-5 position-relative" data-aos="fade-left">
         <img class="w-100 h-100 object-fit-cover bg-img" :src="require('@/assets/images/goals/vision.jpg')" alt="">
         <div class="header position-absolute d-flex align-items-center gap-2">
             <img class="goal_icon" :src="require('@/assets/images/goals/vision_icon.png')" alt="">

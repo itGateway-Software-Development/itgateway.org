@@ -9,8 +9,18 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 import { loadFonts } from "./plugins/webfontloader";
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 loadFonts();
+
+AOS.init({
+    delay: 50,
+    duration: 1000,
+    easing: "ease-in-out",
+    once: true,
+    mirror: true,
+});
 
 store.watch(state => state.locale, newLocale => i18n.global.locale = newLocale);
 

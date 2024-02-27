@@ -2,7 +2,7 @@
     <div class="content-wrapper service-group ">
         <div class="row">
             <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-5"  v-for="(service,index) in serviceGroups" :key="index" >
-                <div class="service-container cursor-pointer ">
+                <div class="service-container cursor-pointer" data-aos="fade-up">
                     <div class="d-flex align-items-center gap-2">
                         <img class="service-icon" :src="service.icon" alt="">
                         <h4>{{service.title}}</h4>

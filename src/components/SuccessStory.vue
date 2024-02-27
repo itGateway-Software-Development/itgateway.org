@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col mx-auto">
                     <div class="grid-wrapper">
-                        <div class="grid-item" v-for="(story, index) in stories" :key="index">
+                        <div class="grid-item" v-for="(story, index) in stories" :key="index" data-aos="flip-left">
                             <div class="d-flex flex-column justify-content-center align-items-center align-items-md-start">
                                 <span :style="{color: story.color}">{{story.data}}</span>
                                 <p>{{story.title}}</p>

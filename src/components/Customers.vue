@@ -1,14 +1,14 @@
 <template>
     <div class="customers content-wrapper">
-        <h2 class="text-center section-header">Our Customers</h2>
-        <p class="text-center">
+        <h2 class="text-center section-header" data-aos="zoom-out">Our Customers</h2>
+        <p class="text-center" data-aos="zoom-out" data-aos-delay="500">
             We are empowering your vision and elevating your success. Most of the customers trusted our leading technology solutions, services, supports and innovation system.
         </p>
         <div class="customer-logo d-flex flex-wrap align-items-center">
-            <div class="img" v-for="i in 11" :key="i">
+            <div class="img" v-for="i in 11" :key="i" data-aos="flip-up">
                 <img :src="require(`@/assets/images/customers/${i}.png`)" alt="">
             </div>
-            <div class="img" v-for="i in 25" :key="i">
+            <div class="img" v-for="i in 25" :key="i" data-aos="flip-up">
                 <img :src="require(`@/assets/images/customers/${i}.jpg`)" alt="">
             </div>
         </div>

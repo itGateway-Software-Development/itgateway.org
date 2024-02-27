@@ -1,6 +1,6 @@
 <template>
-    <div class="vendor-content d-flex flex-wrap align-items-center" v-if="currentTab == 'vendor'">
-        <div class="img" v-for="i in 28" :key="i">
+    <div class="vendor-content d-flex flex-wrap align-items-center">
+        <div class="img" v-for="i in 28" :key="i" data-aos="flip-up">
             <img :src="require(`@/assets/images/vendors/${i}.png`)" alt="">
         </div>
     </div>
@@ -8,7 +8,6 @@
 
 <script>
     export default {
-        props: ['currentTab']
     }
 </script>
 

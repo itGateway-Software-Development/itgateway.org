@@ -1,5 +1,5 @@
 <template>
-    <div v-if="currentTab == 'solution-partner'" class="solution-partner">
+    <div class="solution-partner">
         <div class="row px-3 px-lg-0">
             <div class="col-12 col-lg-5 asia-matrix">
                 <div class="d-flex justify-content-center mb-5">
@@ -56,7 +56,7 @@
 
 <script>
     export default {
-        props: ['currentTab']
+        
     }
 </script>
 

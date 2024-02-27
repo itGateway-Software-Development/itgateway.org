@@ -1,6 +1,6 @@
 <template>
     <div class="vision-mission content-wrapper">
-        <h2 class="text-center section-header">Vision, Mission & Goal</h2>
+        <h2 class="text-center section-header" data-aos="zoom-out">Vision, Mission & Goal</h2>
         <div class="content">
             <div class="row">
                 <div class="col-12 col-sm-6 mb-3 mb-lg-0">

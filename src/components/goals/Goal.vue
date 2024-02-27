@@ -1,5 +1,5 @@
 <template>
-    <div class="goal-img position-relative">
+    <div class="goal-img position-relative" data-aos="zoom-out">
         <img class="w-100 h-100 object-fit-cover bg-img" :src="require('@/assets/images/goals/goals.jpeg')" alt="">
         <div class="header position-absolute d-flex align-items-center gap-3">
             <img class="goal_icon" :src="require('@/assets/images/goals/goal_icon.png')" alt="">

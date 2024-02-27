@@ -2,9 +2,9 @@
     <div class="whyitgateway"  >
         <div class="bg-color"></div>
         <div class="content content-wrapper">
-            <h2 class="mb-5">Why <br> itGateway ?</h2>
+            <h2 class="mb-5" data-aos="fade-down">Why <br> itGateway ?</h2>
             
-            <div class="collapse-item cursor-pointer">
+            <div class="collapse-item cursor-pointer" data-aos="fade-right" data-aos-delay="100">
                 <p class="prevent-pointer">
                     We guarantee to fulfill clients’ satisfaction by offering unique & cost-effective services, best-in-class products, 24/7 365 support and customized solutions.
                 </p>
@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="collapse-item cursor-pointer">
+            <div class="collapse-item cursor-pointer" data-aos="fade-right" data-aos-delay="150">
                 <p class="prevent-pointer">
                     We build trust with 50+ enterprise and SMB clients, and we have completed more than a 100 projects, contracts and successfully till now.
                 </p>
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <div class="collapse-item cursor-pointer">
+            <div class="collapse-item cursor-pointer" data-aos="fade-right" data-aos-delay="200">
                 <p class="prevent-pointer">
                     We deliver outstanding support with our customer oriented and service-minded approach based on their needs.
                 </p>
@@ -36,7 +36,7 @@
                     </a>
                 </div>
             </div>
-            <div class="collapse-item border-none d-flex justify-content-end">
+            <div class="collapse-item border-none d-flex justify-content-end" data-aos="fade-right" data-aos-delay="250">
                 <a href="" class="d-flex align-items-center more-report"> Read More Reports  
                     <span class="material-symbols-outlined">arrow_right_alt</span>
                 </a>
