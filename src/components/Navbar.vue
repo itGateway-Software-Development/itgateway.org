@@ -8,10 +8,17 @@
       </div>
 
       <!-- mobile menu button  -->
-      <div class="mobile-menu-btn" @click="drawer = !drawer">
-        <span class="material-symbols-outlined fs-1">
-          menu_open
-        </span>
+      <div class="mobile-menu-btn align-items-center gap-2">
+        <div class="cursor-pointer">
+          <span class="material-symbols-outlined fs-1">
+            search
+            </span>
+        </div>
+        <div @click="drawer = !drawer" class="cursor-pointer">
+          <span class="material-symbols-outlined fs-1">
+            menu_open
+          </span>
+        </div>
       </div>
 
       <div class="top-menu ">
@@ -49,22 +56,6 @@
     </div>
     </nav>
 
-    <!-- mobile menu  -->
-    <v-navigation-drawer app v-model="drawer" id="drawer" temporary>
-      <v-list>
-        <v-list-item @click="navigate('/')" class="head-menu">
-          <v-list-item-title style="font-size: 14px; color: #50c4ff">
-            <span>itGateway</span>
-          </v-list-item-title>
-        </v-list-item>
-        <v-list-item @click="navigate('/')">
-          <v-list-item-title class="main-title">
-            <v-icon icon="mdi-home"></v-icon> Home</v-list-item-title
-          >
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
     <nav class=" main-nav pt-0 position-relative" :class="{active: isScroll}">
       <router-link to="#" class="menu service-group" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('service-group') }}
@@ -86,6 +77,141 @@
       <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">{{ $t('event') }}</router-link>
       <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">{{ $t('careers') }}</router-link>
     </nav>
+
+    <!-- Sidebar (Drawer) for mobile -->
+      <v-navigation-drawer
+      app
+      v-model="drawer"
+      style="background: #242142; color: #ededed;"
+      id="drawer"
+      temporary
+    >
+      <v-list>
+        <v-list-item @click="navigate('/')">
+          <div class="d-flex justify-content-between align-items-center">
+            <img :src="require('@/assets/images/logo2.png')" class="w-50" alt="" style="margin-left: -30px;">
+            <span class="material-symbols-outlined fs-1 text-white">
+              close
+              </span>
+          </div>
+        </v-list-item>
+        <hr style="color: #EC6316;">
+        <v-list-group value="Service Groups">
+          <template v-slot:activator="{ props }">
+            <v-list-item v-bind="props" title="Service Groups"></v-list-item>
+          </template>
+          <v-list-item @click="navigate('#')">
+            <v-list-item-title>Cloud Service</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="navigate('/#')">
+            <v-list-item-title>Software Development</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="navigate('/#')">
+            <v-list-item-title>Premium IT Solutions</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="navigate('/#')">
+            <v-list-item-title>Engineering Solutions</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="navigate('/#')">
+            <v-list-item-title>Manage Service</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="navigate('/#')">
+            <v-list-item-title>IT Trainings</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="navigate('/#')">
+            <v-list-item-title>Cyber Security</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="navigate('/#')">
+            <v-list-item-title>Application Services</v-list-item-title>
+          </v-list-item>
+        </v-list-group>
+
+        <hr class="p-0 m-0" >
+
+        <v-list-group value="Solutions">
+          <template v-slot:activator="{ props }">
+            <v-list-item v-bind="props" title="Solutions"></v-list-item>
+          </template>
+          <v-list-group value="Cloud">
+            <template v-slot:activator="{ props }">
+              <v-list-item v-bind="props" title="Cloud"></v-list-item>
+            </template>
+
+            <v-list-item @click="navigate('/#')">
+              <v-list-item-title>itGateway Cloud</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="navigate('/#')">
+              <v-list-item-title>Multi Cloud</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="navigate('/#')">
+              <v-list-item-title>Manage Cloud Service</v-list-item-title>
+            </v-list-item>
+
+            <hr class="p-0 m-0" >
+            
+          </v-list-group>
+          <v-list-group value="Software">
+            <template v-slot:activator="{ props }">
+              <v-list-item v-bind="props" title="Software"></v-list-item>
+            </template>
+
+            <v-list-item @click="navigate('/#')">
+              <v-list-item-title>itGateway Cloud</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="navigate('/#')">
+              <v-list-item-title>Multi Cloud</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="navigate('/#')">
+              <v-list-item-title>Manage Cloud Service</v-list-item-title>
+            </v-list-item>
+          </v-list-group>
+        </v-list-group>
+
+        <hr class="py-0 my-0" >
+
+        <!-- <v-list-group value="Products">
+          <template v-slot:activator="{ props }">
+            <v-list-item v-bind="props" title="Products"></v-list-item>
+          </template>
+
+          <v-list-item @click="navigate('/products/networking')">
+            <v-list-item-title>Networking</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="navigate('/products/computing')">
+            <v-list-item-title>Computing</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="navigate('/products/security')">
+            <v-list-item-title>Security</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="navigate('/products/collaboration')">
+            <v-list-item-title>Collaboration</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="navigate('/products/software')">
+            <v-list-item-title>Software</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="navigate('/products/rack')">
+            <v-list-item-title>Rack & Online UPS</v-list-item-title>
+          </v-list-item>
+        </v-list-group>
+
+        <v-list-item @click="navigate('/case-studies')">
+          <v-list-item-title>Case Studies</v-list-item-title>
+        </v-list-item>
+
+        <v-list-item @click="navigate('/promotion')">
+          <v-list-item-title>Promotion</v-list-item-title>
+        </v-list-item>
+
+        <v-list-item @click="navigate('/about-us/contact')">
+          <v-list-item-title>Contact Us</v-list-item-title>
+        </v-list-item> -->
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 

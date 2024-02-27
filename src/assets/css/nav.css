@@ -272,7 +272,7 @@ nav .language button:hover {
     }
 
     nav .mobile-menu-btn {
-        display: block;
+        display: flex;
     }
 }
 
