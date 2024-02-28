@@ -306,10 +306,12 @@
 
 <script>
     export default {
+        props: ['language'],
         setup(props, {emit}) {
             const changeRoute = (route) => emit('changeRoute', route);
+            const changeLanguage = (lang) => emit('switchLanguage', lang);
 
-            return {changeRoute};
+            return {changeRoute, changeLanguage};
         }
     }
 </script>

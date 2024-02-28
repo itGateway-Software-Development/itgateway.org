@@ -86,7 +86,7 @@
       id="drawer"
       temporary
     >
-      <MobileDrawer @changeRoute="handleChangeRoute" />
+      <MobileDrawer :language="language" @switchLanguage="handleSwitchLanguage" @changeRoute="handleChangeRoute" />
     </v-navigation-drawer>
 
     <!-- Search Ui for mobile  -->
@@ -146,6 +146,11 @@ export default {
       store.dispatch('getLocale', lang);
     }
 
+    const handleSwitchLanguage = (lang) => {
+      language.value = lang;
+      store.dispatch('getLocale', lang);
+    }
+
     const handleNavShadow = () => {
       if(window.scrollY > 300) {
         isScroll.value = true;
@@ -168,7 +173,7 @@ export default {
       window.addEventListener('scroll', handleNavShadow);
     })
 
-      return { currentTheme,changeTheme, isSearch, drawer, navigate,handleChangeRoute, dropdownContent, changeLanguage, language, menuHover, isScroll, handleSearch, isMobileSearch}
+      return { currentTheme,changeTheme, isSearch, drawer, navigate,handleChangeRoute, dropdownContent, changeLanguage,handleSwitchLanguage, language, menuHover, isScroll, handleSearch, isMobileSearch}
   }
 };
 </script>
