@@ -2,13 +2,16 @@
     <v-list>
         <v-list-item @click="changeRoute('/')">
         <div class="d-flex justify-content-between align-items-center">
-            <img :src="require('@/assets/images/logo2.png')" class="w-50 object-cover" alt="" style="margin-left: -30px;">
+            <div class="logo">
+                <img :src="require('@/assets/images/logo.png')" alt="">
+                <h5 class="mt-2">itGateway <br> Technology Group</h5>
+              </div>
             <span class="material-symbols-outlined fs-1 text-white">
             close
             </span>
         </div>
         </v-list-item>
-        <hr style="color: #EC6316;">
+        <div style="width: 100%; height: 2px; background: #EC6316;"></div>
         <v-list-group value="Service Groups">
         <template v-slot:activator="{ props }">
             <v-list-item v-bind="props" >{{$t("service-group")}}</v-list-item>
