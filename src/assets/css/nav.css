@@ -193,6 +193,10 @@ nav .language-wrapper:hover .language {
     height: 80px;
 }
 
+.active-lang {
+    background: rgba(192, 190, 190, 0.226);
+}
+
 nav .language button {
     margin-bottom: 5px;
     transition: .3s ease;
@@ -263,16 +267,6 @@ nav .language button:hover {
 @media (max-width: 1500px) {
     .menu:hover .dropdown{
         height: 450px;
-    }
-}
-
-@media (max-width: 768px) {
-    nav .top-menu, nav.main-nav {
-        display: none !important;
-    }
-
-    nav .mobile-menu-btn {
-        display: flex;
     }
 }
 
@@ -353,6 +347,19 @@ nav .language button:hover {
 @media(max-width: 890px) {
     nav .search-input.searching {
         width:280px;
+    }
+}
+
+@media (max-width: 768px) {
+    *{
+        overflow: hidden;
+    }
+    nav .top-menu, nav.main-nav {
+        display: none !important;
+    }
+
+    nav .mobile-menu-btn {
+        display: flex;
     }
 }
 

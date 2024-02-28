@@ -79,143 +79,20 @@
     </nav>
 
     <!-- Sidebar (Drawer) for mobile -->
-      <v-navigation-drawer
+    <v-navigation-drawer
       app
       v-model="drawer"
       style="background: #242142; color: #ededed;"
       id="drawer"
       temporary
     >
-      <v-list>
-        <v-list-item @click="navigate('/')">
-          <div class="d-flex justify-content-between align-items-center">
-            <img :src="require('@/assets/images/logo2.png')" class="w-50" alt="" style="margin-left: -30px;">
-            <span class="material-symbols-outlined fs-1 text-white">
-              close
-              </span>
-          </div>
-        </v-list-item>
-        <hr style="color: #EC6316;">
-        <v-list-group value="Service Groups">
-          <template v-slot:activator="{ props }">
-            <v-list-item v-bind="props" title="Service Groups"></v-list-item>
-          </template>
-          <v-list-item @click="navigate('#')">
-            <v-list-item-title>Cloud Service</v-list-item-title>
-          </v-list-item>
-          <v-list-item @click="navigate('/#')">
-            <v-list-item-title>Software Development</v-list-item-title>
-          </v-list-item>
-          <v-list-item @click="navigate('/#')">
-            <v-list-item-title>Premium IT Solutions</v-list-item-title>
-          </v-list-item>
-          <v-list-item @click="navigate('/#')">
-            <v-list-item-title>Engineering Solutions</v-list-item-title>
-          </v-list-item>
-          <v-list-item @click="navigate('/#')">
-            <v-list-item-title>Manage Service</v-list-item-title>
-          </v-list-item>
-          <v-list-item @click="navigate('/#')">
-            <v-list-item-title>IT Trainings</v-list-item-title>
-          </v-list-item>
-          <v-list-item @click="navigate('/#')">
-            <v-list-item-title>Cyber Security</v-list-item-title>
-          </v-list-item>
-          <v-list-item @click="navigate('/#')">
-            <v-list-item-title>Application Services</v-list-item-title>
-          </v-list-item>
-        </v-list-group>
-
-        <hr class="p-0 m-0" >
-
-        <v-list-group value="Solutions">
-          <template v-slot:activator="{ props }">
-            <v-list-item v-bind="props" title="Solutions"></v-list-item>
-          </template>
-          <v-list-group value="Cloud">
-            <template v-slot:activator="{ props }">
-              <v-list-item v-bind="props" title="Cloud"></v-list-item>
-            </template>
-
-            <v-list-item @click="navigate('/#')">
-              <v-list-item-title>itGateway Cloud</v-list-item-title>
-            </v-list-item>
-            <v-list-item @click="navigate('/#')">
-              <v-list-item-title>Multi Cloud</v-list-item-title>
-            </v-list-item>
-            <v-list-item @click="navigate('/#')">
-              <v-list-item-title>Manage Cloud Service</v-list-item-title>
-            </v-list-item>
-
-            <hr class="p-0 m-0" >
-            
-          </v-list-group>
-          <v-list-group value="Software">
-            <template v-slot:activator="{ props }">
-              <v-list-item v-bind="props" title="Software"></v-list-item>
-            </template>
-
-            <v-list-item @click="navigate('/#')">
-              <v-list-item-title>itGateway Cloud</v-list-item-title>
-            </v-list-item>
-            <v-list-item @click="navigate('/#')">
-              <v-list-item-title>Multi Cloud</v-list-item-title>
-            </v-list-item>
-            <v-list-item @click="navigate('/#')">
-              <v-list-item-title>Manage Cloud Service</v-list-item-title>
-            </v-list-item>
-          </v-list-group>
-        </v-list-group>
-
-        <hr class="py-0 my-0" >
-
-        <!-- <v-list-group value="Products">
-          <template v-slot:activator="{ props }">
-            <v-list-item v-bind="props" title="Products"></v-list-item>
-          </template>
-
-          <v-list-item @click="navigate('/products/networking')">
-            <v-list-item-title>Networking</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item @click="navigate('/products/computing')">
-            <v-list-item-title>Computing</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item @click="navigate('/products/security')">
-            <v-list-item-title>Security</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item @click="navigate('/products/collaboration')">
-            <v-list-item-title>Collaboration</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item @click="navigate('/products/software')">
-            <v-list-item-title>Software</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item @click="navigate('/products/rack')">
-            <v-list-item-title>Rack & Online UPS</v-list-item-title>
-          </v-list-item>
-        </v-list-group>
-
-        <v-list-item @click="navigate('/case-studies')">
-          <v-list-item-title>Case Studies</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item @click="navigate('/promotion')">
-          <v-list-item-title>Promotion</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item @click="navigate('/about-us/contact')">
-          <v-list-item-title>Contact Us</v-list-item-title>
-        </v-list-item> -->
-      </v-list>
+      <MobileDrawer @changeRoute="handleChangeRoute" />
     </v-navigation-drawer>
   </div>
 </template>
 
 <script>
+import MobileDrawer from './MobileDrawer'
 import "@/assets/css/nav.css";
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
@@ -226,7 +103,8 @@ import Blogs from '@/components/navDropdown/Blogs';
 import { useStore } from "vuex";
 
 export default {
-  components: {Solutions, ServiceGroup, Products, Blogs},
+  components: {
+    MobileDrawer,Solutions, ServiceGroup, Products, Blogs},
   setup(props, {emit}) {
     const currentTheme = ref('dark');
     const isSearch = ref(false);
@@ -241,6 +119,12 @@ export default {
       router.push(route);
       drawer.value = false;
     }
+
+    const handleChangeRoute = (route) => {
+      router.push(route);
+      drawer.value = false;
+    }
+
     const changeTheme = (theme) => { currentTheme.value = theme };
     const menuHover = (value) => emit("menuHoverStatus", value);
 
@@ -271,7 +155,7 @@ export default {
       window.addEventListener('scroll', handleNavShadow);
     })
 
-      return { currentTheme,changeTheme, isSearch, drawer, navigate, dropdownContent, changeLanguage, language, menuHover, isScroll, handleSearch}
+      return { currentTheme,changeTheme, isSearch, drawer, navigate,handleChangeRoute, dropdownContent, changeLanguage, language, menuHover, isScroll, handleSearch}
   }
 };
 </script>
