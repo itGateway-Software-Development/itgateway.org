@@ -14,6 +14,17 @@
             search
             </span>
         </div>
+        <div>
+          <!-- dark icon  -->
+          <span class="m-0 p-0 menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon theme-icon" @click="changeTheme('dark')" :class="{'d-none': currentTheme == 'dark'}" >
+            light_mode
+            <span class="light-icon-info menu-icon-info">change to dark</span>
+          </span>
+          <span class="m-0 p-0 menu-icon material-symbols-outlined cursor-pointer prevent-select dark-icon theme-icon" @click="changeTheme('light')" :class="{'d-none': currentTheme == 'light'}" >
+            dark_mode
+            <span class="dark-icon-info menu-icon-info">change to light</span>
+          </span>
+        </div>
         <div @click="drawer = !drawer" class="cursor-pointer">
           <span class="material-symbols-outlined fs-1">
             menu_open
