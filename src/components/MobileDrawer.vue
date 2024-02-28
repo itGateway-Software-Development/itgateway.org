@@ -2,7 +2,7 @@
     <v-list>
         <v-list-item @click="changeRoute('/')">
         <div class="d-flex justify-content-between align-items-center">
-            <img :src="require('@/assets/images/logo2.png')" class="w-50" alt="" style="margin-left: -30px;">
+            <img :src="require('@/assets/images/logo2.png')" class="w-50 object-cover" alt="" style="margin-left: -30px;">
             <span class="material-symbols-outlined fs-1 text-white">
             close
             </span>

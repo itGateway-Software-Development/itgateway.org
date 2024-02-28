@@ -9,8 +9,8 @@
 
       <!-- mobile menu button  -->
       <div class="mobile-menu-btn align-items-center gap-2">
-        <div class="cursor-pointer">
-          <span class="material-symbols-outlined fs-1">
+        <div class="cursor-pointer" @click="isMobileSearch = !isMobileSearch">
+          <span class="material-symbols-outlined fs-1" :style="{'color': isMobileSearch ? '#EC6316' : ''}">
             search
             </span>
         </div>
@@ -88,6 +88,18 @@
     >
       <MobileDrawer @changeRoute="handleChangeRoute" />
     </v-navigation-drawer>
+
+    <!-- Search Ui for mobile  -->
+    <div v-if="isMobileSearch" class="w-100 h-100 position-fixed border-top" style="background: #242142;">
+      <div class="input-group my-2 px-1">
+        <input type="text" class="form-control" placeholder="Search Here ..."  aria-describedby="basic-addon2">
+        <span class="input-group-text cursor-pointer" style="background: rgba(173, 173, 173, 0.144);" id="basic-addon2" @click="isMobileSearch = !isMobileSearch">
+          <span class="material-symbols-outlined fs-1 text-white">
+            close
+            </span>
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -114,6 +126,7 @@ export default {
     const store = useStore();
     const language = ref('EN');
     const isScroll = ref(false);
+    const isMobileSearch = ref(false);
 
     const navigate = (route) => {
       router.push(route);
@@ -155,7 +168,7 @@ export default {
       window.addEventListener('scroll', handleNavShadow);
     })
 
-      return { currentTheme,changeTheme, isSearch, drawer, navigate,handleChangeRoute, dropdownContent, changeLanguage, language, menuHover, isScroll, handleSearch}
+      return { currentTheme,changeTheme, isSearch, drawer, navigate,handleChangeRoute, dropdownContent, changeLanguage, language, menuHover, isScroll, handleSearch, isMobileSearch}
   }
 };
 </script>
