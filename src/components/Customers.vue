@@ -52,6 +52,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        background: #fff;
     }
 
     @media (max-width: 1735px) {
