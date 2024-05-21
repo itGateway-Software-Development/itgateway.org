@@ -10,7 +10,7 @@
                 </p>
                 <div class="collapsable mb-1 prevent-pointer" id="contentCollapse1" >
                     <a href="" class="d-flex align-items-center prevent-pointer"> View Managed Services 
-                        <span class="material-symbols-outlined prevent-pointer">arrow_right_alt</span>
+                        <span class="material-symbols-outlined prevent-pointer mt-1 ms-1">arrow_right_alt</span>
                     </a>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 </p>
                 <div class="collapsable mb-1 prevent-pointer" id="contentCollapse2" >
                     <a href="" class="d-flex align-items-center prevent-pointer"> View Software Development 
-                        <span class="material-symbols-outlined prevent-pointer">arrow_right_alt</span>
+                        <span class="material-symbols-outlined prevent-pointer mt-1 ms-1">arrow_right_alt</span>
                     </a>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 </p>
                 <div class="collapsable mb-1 prevent-pointer" id="contentCollapse3" >
                     <a href="" class="d-flex align-items-center prevent-pointer"> View Managed Cloud Services  
-                        <span class="material-symbols-outlined prevent-pointer">arrow_right_alt</span>
+                        <span class="material-symbols-outlined prevent-pointer mt-1 ms-1">arrow_right_alt</span>
                     </a>
                 </div>
             </div>
@@ -57,7 +57,7 @@
 
 <style scoped>
 .whyitgateway {
-    margin-top: 60px;
+    margin-top: 90px;
     height: 700px;
     background-image: url('@/assets/images/whyitGateway/itgateway.png');
     background-size: 100%;
@@ -108,6 +108,11 @@
 .whyitgateway .content .collapsable a {
     color: #ededed !important;
     font-size: 18px;
+}
+
+.whyitgateway .content .collapse-item:hover .collapsable a {
+    color: #f36a1b !important;
+    font-weight: bold;
 }
 
 .whyitgateway .content .more-report {

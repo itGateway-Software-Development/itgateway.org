@@ -38,7 +38,7 @@ import { ref } from 'vue'
 
 <style scoped>
     .partners {
-        margin-top: 100px;
+        margin-top: 90px;
     }
 
     .partners h2 {

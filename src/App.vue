@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <Navbar @menuHoverStatus="menuHoverEffect"/>
+    <Navbar @menuHoverStatus="menuHoverEffect" @themeChange="handleTheme"/>
     <v-main :class="{blurPage : isHover}">
       <Loading v-if="loading" />
-      <router-view />
+      <router-view :theme="theme" />
     </v-main>
     <Footer />
   </v-app>
@@ -20,14 +20,16 @@ export default {
   setup() {
     const loading = ref(true);
     const isHover = ref(false);
+    const theme = ref('light');
 
     const menuHoverEffect = (data) => isHover.value = data;
+    const handleTheme = (data) => theme.value = data;
     
     onMounted(() => {
       loading.value = false;
     })
 
-    return {loading, menuHoverEffect, isHover}
+    return {loading, menuHoverEffect, isHover, handleTheme, theme}
   },
 
 };

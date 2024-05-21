@@ -2,15 +2,15 @@
     <div class="goal-img position-relative" data-aos="zoom-out">
         <img class="w-100 h-100 object-fit-cover bg-img" :src="require('@/assets/images/goals/goals.jpeg')" alt="">
         <div class="header position-absolute d-flex align-items-center gap-3">
-            <img class="goal_icon" :src="require('@/assets/images/goals/goal_icon.png')" alt="">
+            <img class="goal_icon" :src="require('@/assets/images/goals/goal_icon_light.png')" alt="">
             <h3 class="section-header">Goals</h3>
         </div>
         <div class="goal-content w-100 ">
             <div class="d-flex flex-column align-items-center">
-                <router-link to="#" class="d-flex gap-2"> 
+                <a href="https://main.itgateway.cloud" target="_blank" class="d-flex gap-2"> 
                     itGateway Cloud
                     <span class="material-symbols-outlined mt-1">arrow_right_alt</span>
-                </router-link>
+                </a>
                 <router-link to="#" class="d-flex gap-2"> 
                     Software Development 
                     <span class="material-symbols-outlined mt-1">arrow_right_alt</span>
@@ -46,7 +46,6 @@
 
 <script>
     export default {
-        
     }
 </script>
 
@@ -63,7 +62,7 @@
     }
 
     .vision-mission .goal-img .header h3 {
-        font-size: 48px;
+        font-size: 32px;
         font-weight: bold;
         margin-top: 10px;
     }

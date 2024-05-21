@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Carousel></Carousel>
-    <ServiceGroup></ServiceGroup>
+    <ServiceGroup :theme="theme"></ServiceGroup>
     <SuccessStory></SuccessStory>
     <WhyitGateway></WhyitGateway>
     <Customers></Customers>
@@ -27,7 +27,10 @@ export default {
     WhyitGateway,
     SuccessStory,
     ServiceGroup,
-    Carousel,},
+    Carousel,
+  },
+  props: ['theme'],
+
 };
 </script>
 

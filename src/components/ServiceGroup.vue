@@ -4,7 +4,7 @@
             <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-5"  v-for="(service,index) in serviceGroups" :key="index" >
                 <div class="service-container cursor-pointer" data-aos="fade-up">
                     <div class="d-flex header align-items-center gap-2">
-                        <img class="service-icon" :src="service.icon" alt="">
+                        <img class="service-icon" :src="theme == 'dark' ? service.icon_light : service.icon" alt="">
                         <h4>{{service.title}}</h4>
                     </div>
                     <p>{{service.content}}</p>
@@ -21,6 +21,7 @@
 
 <script>
     export default {
+    props: ['theme'],
     setup() {
             const serviceGroups = [
                 {
@@ -28,48 +29,56 @@
                     content: "Running your resources and keep the data on our cloud infrastructure securely.",
                     url: '#',
                     icon: require('@/assets/images/service_group/cloud.png'),
+                    icon_light: require('@/assets/images/service_group/cloud_light.png'),
                 },
                 {
                     title: "Premium IT Solutions",
                     content: "Providing the latest IT solutions and services for the best customer experience.",
                     url: '#',
                     icon: require('@/assets/images/service_group/premium.png'),
+                    icon_light: require('@/assets/images/service_group/premium_light.png'),
                 },
                 {
                     title: "Software Development​",
                     content: "Offers not only business and enterprise application but also web development. ​",
                     url: '#',
                     icon: require('@/assets/images/service_group/software_development.png'),
+                    icon_light: require('@/assets/images/service_group/software_development_light.png'),
                 },
                 {
                     title: "Engineering Solutions​",
                     content: "Providing the latest IT solutions and services for the best customer experience.​",
                     url: '#',
                     icon: require('@/assets/images/service_group/engineering.png'),
+                    icon_light: require('@/assets/images/service_group/engineering_light.png'),
                 },
                 {
                     title: "Cloud Application​",
                     content: "Build & deploy faster and easy to use cloud based application with SaaS.​​",
                     url: '#',
                     icon: require('@/assets/images/service_group/cloud_app.png'),
+                    icon_light: require('@/assets/images/service_group/cloud_app_light.png'),
                 },
                 {
                     title: "Managed Services​",
                     content: "You can ignore anything about IT, because we can build, deploy and managed for you.​​",
                     url: '#',
                     icon: require('@/assets/images/service_group/manage_service.png'),
+                    icon_light: require('@/assets/images/service_group/manage_service_light.png'),
                 },
                 {
                     title: "Cyber Security​",
                     content: "Protect your business and critical data with our strong Cyber Security Operation team.​​",
                     url: '#',
                     icon: require('@/assets/images/service_group/cyber_security.png'),
+                    icon_light: require('@/assets/images/service_group/cyber_security_light.png'),
                 },
                 {
                     title: "IT Trainings​",
                     content: "Maximize your IT skills rapidly with our training team for DevOps, Cloud, Development & more. ​​",
                     url: '#',
                     icon: require('@/assets/images/service_group/training.png'),
+                    icon_light: require('@/assets/images/service_group/training_light.png'),
                 }
             ];
 
@@ -81,7 +90,7 @@
 <style scoped>
 
     .service-group {
-        margin-top: 60px;
+        margin-top: 90px;
     }
     .service-container {
         padding: 30px;
@@ -95,7 +104,7 @@
 
     .service-container:hover {
         transform: translateY(-10px);
-        box-shadow: 4px 4px 8px var(--sec-background-light-color);
+        box-shadow: 4px 4px 8px #6864a0;
     }
 
     .service-container .header {

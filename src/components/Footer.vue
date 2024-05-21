@@ -4,7 +4,7 @@
             <div class="col-5 col-md-3 col-lg-2 mb-5">
                 <h4 class="section-header">Services</h4>
                 <div class="content">
-                    <router-link to="#">Cloud​</router-link>
+                    <a href="https://main.itgateway.cloud" target="_blank">Cloud​</a>
                     <router-link to="#">Applications​</router-link>
                     <router-link to="#">Cyber Security​</router-link>
                     <router-link to="#">Infrastructure​</router-link>
@@ -44,7 +44,7 @@
             <hr class="d-block d-md-none">
             <div class="col-md-12 col-lg-3 mb-5">
                 <div class="d-flex flex-column">
-                    <a href="" class="portal-btn primary-btn">Customer Portal</a>
+                    <a href="" class="portal-btn primary-btn fill">Customer Portal</a>
                     <div class="social d-flex justify-content-center gap-5 align-items-center mt-5">
                         <a href="https://www.facebook.com/ITGatewayTechnologyGroup" target="_blink"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="" target="_blink"><i class="fa-brands fa-youtube"></i></a>
@@ -95,7 +95,7 @@ import { ref } from 'vue';
 
 <style scoped>
     .footer {
-        margin-top: 100px;
+        margin-top: 90px;
         background: var(--sec-background-color);
         padding-bottom: 0px;
     }

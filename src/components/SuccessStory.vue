@@ -70,12 +70,9 @@
 
 <style scoped>
     .success-story-wrapper {
-        margin-top: 60px;
+        margin-top: 90px;
     }
 
-    .stories {
-        margin-top: 60px;
-    }
 
     .grid-wrapper {
         display: grid;

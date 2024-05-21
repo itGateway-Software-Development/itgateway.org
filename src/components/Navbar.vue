@@ -1,70 +1,68 @@
 <template>
   <div class="nav-wrapper">
     <nav class="pb-1">
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="logo">
-        <img :src="require('@/assets/images/logo.png')" alt="">
-        <h5 class="mt-2">itGateway <br> Technology Group</h5>
-      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="logo">
+          <img :src="require('@/assets/images/logo.png')" alt="">
+          <h5 class="mt-2">itGateway Technology Group</h5>
+        </div>
 
-      <!-- mobile menu button  -->
-      <div class="mobile-menu-btn align-items-center gap-2">
-        <div class="cursor-pointer" @click="isMobileSearch = !isMobileSearch">
-          <span class="material-symbols-outlined fs-1" :style="{'color': isMobileSearch ? '#EC6316' : ''}">
-            search
-            </span>
-        </div>
-        <div>
-          <!-- dark icon  -->
-          <span class="m-0 p-0 menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon theme-icon" @click="changeTheme('dark')" :class="{'d-none': currentTheme == 'dark'}" >
-            light_mode
-            <span class="light-icon-info menu-icon-info">change to dark</span>
-          </span>
-          <span class="m-0 p-0 menu-icon material-symbols-outlined cursor-pointer prevent-select dark-icon theme-icon" @click="changeTheme('light')" :class="{'d-none': currentTheme == 'light'}" >
-            dark_mode
-            <span class="dark-icon-info menu-icon-info">change to light</span>
-          </span>
-        </div>
-        <div @click="drawer = !drawer" class="cursor-pointer">
-          <span class="material-symbols-outlined fs-1">
-            menu_open
-          </span>
-        </div>
-      </div>
-
-      <div class="top-menu ">
-        <span  class=" search-input-wrapper d-inline-flex" :class="{searching: isSearch}">
-            <input type="text" class="search-input" placeholder="search ....." :class="{'searching' : isSearch}">
-            <span class="material-symbols-outlined icon cursor-pointer search-bar-icon prevent-select" :class="{'searching' : isSearch}" ref="searchIcon"  @click="handleSearch">
+        <!-- mobile menu button  -->
+        <div class="mobile-menu-btn align-items-center gap-2">
+          <div class="cursor-pointer" @click="isMobileSearch = !isMobileSearch">
+            <span class="material-symbols-outlined fs-1" :style="{'color': isMobileSearch ? '#EC6316' : ''}">
               search
-            </span>
-        </span>
-        <router-link to="" class="menu">{{ $t("contact") }}</router-link>
-        <router-link to="" class="menu">{{ $t("about") }}</router-link>
-        <router-link to="" class="menu d-flex align-items-center position-relative language-wrapper">
-          <span v-if="language == 'EN'" class="span-menu">English</span>
-          <span v-else class="span-menu">မြန်မာ</span>
-          <i class="mdi mdi-menu-down"></i>
-          <div class="language">
-            <button @click="changeLanguage('EN')">English</button>
-            <button @click="changeLanguage('MM')">Myanmar</button>
+              </span>
           </div>
-        </router-link>
-        <div class="btn-wrapper">
-          <a href="#" class="menu btn btn-sm menu-btn primary-btn">{{ $t('customer_portal') }}</a>
+          <div>
+            <!-- dark icon  -->
+            <span class="m-0 p-0 menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon theme-icon" @click="changeTheme('dark')" :class="{'d-none': currentTheme == 'dark'}" >
+              light_mode
+              <span class="light-icon-info menu-icon-info">change to dark</span>
+            </span>
+            <span class="m-0 p-0 menu-icon material-symbols-outlined cursor-pointer prevent-select dark-icon theme-icon" @click="changeTheme('light')" :class="{'d-none': currentTheme == 'light'}" >
+              dark_mode
+              <span class="dark-icon-info menu-icon-info">change to light</span>
+            </span>
+          </div>
+          <div @click="drawer = !drawer" class="cursor-pointer">
+            <span class="material-symbols-outlined fs-1">
+              menu_open
+            </span>
+          </div>
         </div>
-        
-        <!-- dark icon  -->
-        <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon theme-icon" @click="changeTheme('dark')" :class="{'d-none': currentTheme == 'dark'}" >
-          light_mode
-          <span class="light-icon-info menu-icon-info">change to dark</span>
-        </span>
-        <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select dark-icon theme-icon" @click="changeTheme('light')" :class="{'d-none': currentTheme == 'light'}" >
-          dark_mode
-          <span class="dark-icon-info menu-icon-info">change to light</span>
-        </span>
+
+        <div class="top-menu ">
+          <span  class=" search-input-wrapper d-inline-flex" :class="{searching: isSearch}">
+              <input type="text" class="search-input" placeholder="search ....." :class="{'searching' : isSearch}">
+              <span class="material-symbols-outlined icon cursor-pointer search-bar-icon prevent-select" :class="{'searching' : isSearch}" ref="searchIcon"  @click="handleSearch">
+                search
+              </span>
+          </span>
+          <router-link to="" class="menu">{{ $t("contact") }}</router-link>
+          <router-link to="" class="menu">{{ $t("about") }}</router-link>
+          <router-link to="" class="menu d-flex align-items-center position-relative language-wrapper">
+            <span v-if="language == 'EN'" class="span-menu">English</span>
+            <span v-else class="span-menu">မြန်မာ</span>
+            <i class="mdi mdi-menu-down"></i>
+            <div class="language">
+              <button @click="changeLanguage('EN')">English</button>
+              <button @click="changeLanguage('MM')">Myanmar</button>
+            </div>
+          </router-link>
+          <div class="btn-wrapper">
+            <a href="#" class="btn btn-sm menu-btn primary-btn text-center">{{ $t('customer_portal') }}</a>
+          </div>
+          
+          <!-- dark icon  -->
+          <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select light-icon theme-icon" @click="changeTheme('dark')" :class="{'d-none': currentTheme == 'dark'}" >
+            light_mode
+          </span>
+          <span class="menu-icon material-symbols-outlined cursor-pointer prevent-select dark-icon theme-icon" @click="changeTheme('light')" :class="{'d-none': currentTheme == 'light'}" >
+            dark_mode
+          </span>
+        </div>
       </div>
-    </div>
     </nav>
 
     <nav class=" main-nav pt-0 position-relative" :class="{active: isScroll}">
@@ -129,7 +127,7 @@ export default {
   components: {
     MobileDrawer,Solutions, ServiceGroup, Products, Blogs},
   setup(props, {emit}) {
-    const currentTheme = ref('dark');
+    const currentTheme = ref('light');
     const isSearch = ref(false);
     const drawer = ref(false);
     const router = useRouter();

@@ -30,7 +30,7 @@ export default {
 
 <style>
     .vision-mission {
-        margin-top: 100px;
+        margin-top: 90px;
     }
 
     .vision-mission h2 {

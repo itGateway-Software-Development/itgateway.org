@@ -23,7 +23,7 @@
 
 <style scoped>
     .customers {
-        margin-top: 60px;
+        margin-top: 90px;
     }
 
     .customers h2 {

@@ -95,7 +95,7 @@ import { onMounted, ref } from 'vue'
         width: 100%;
         height: 700px;
         position: relative;
-        margin-top: 112px;
+        margin-top: 85px;
     }
 
     .carousel-wrapper .carousel-bg-color {

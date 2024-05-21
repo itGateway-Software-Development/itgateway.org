@@ -2,7 +2,7 @@
     <div class="mission-img position-relative" data-aos="fade-up">
         <img class="w-100 h-100 object-fit-cover bg-img" :src="require('@/assets/images/goals/mission.jpg')" alt="">
         <div class="header position-absolute d-flex align-items-center gap-2">
-            <img class="goal_icon" :src="require('@/assets/images/goals/mission_icon.png')" alt="">
+            <img class="goal_icon" :src="require('@/assets/images/goals/mission_icon_light.png')" alt="">
             <h3 class="section-header">Mission</h3>
         </div>
         <div class="vision-content">
@@ -15,7 +15,6 @@
 
 <script>
     export default {
-        
     }
 </script>
 
@@ -28,7 +27,7 @@
     }
 
     .vision-mission .mission-img .header h3 {
-        font-size: 2.2rem;
+        font-size: 32px;
         font-weight: bold;
         margin-top: 10px;
     }
@@ -43,6 +42,7 @@
         top: 30%;
         padding: 0px 5%;
     }
+
 
     @media(max-width: 1200px) {
         .vision-mission .mission-img .header h3 {
