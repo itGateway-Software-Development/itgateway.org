@@ -8,7 +8,7 @@
             <div class="img" v-for="i in 11" :key="i" data-aos="flip-up">
                 <img :src="require(`@/assets/images/customers/${i}.png`)" alt="">
             </div>
-            <div class="img" v-for="i in 25" :key="i" data-aos="flip-up">
+            <div class="img" v-for="i in 27" :key="i" data-aos="flip-up">
                 <img :src="require(`@/assets/images/customers/${i}.jpg`)" alt="">
             </div>
         </div>
