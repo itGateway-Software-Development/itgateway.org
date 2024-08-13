@@ -68,7 +68,7 @@
     <nav class=" main-nav pt-0 position-relative" :class="{active: isScroll}">
       <router-link to="#" class="menu service-group" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('service-group') }}
-        <ServiceGroup />
+        <ServiceGroup :dropdownContent=dropdownContent />
       </router-link>
       <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('solutions') }}
@@ -76,7 +76,7 @@
       </router-link>
       <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('products') }}
-        <Products />
+        <Products :dropdownContent=dropdownContent />
       </router-link>
       <router-link to="#" class="menu" @mouseenter="menuHover(true)" @mouseleave="menuHover(false)">
         {{ $t('blogs') }}
@@ -131,7 +131,7 @@ export default {
     const isSearch = ref(false);
     const drawer = ref(false);
     const router = useRouter();
-    const dropdownContent = ref('cloud');
+    const dropdownContent = ref('cloud_service');
     const store = useStore();
     const language = ref('EN');
     const isScroll = ref(false);

@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           document.documentElement.style.setProperty("--background-light-color","#242142");
           document.documentElement.style.setProperty("--sec-font-color","#ededed");
           document.documentElement.style.setProperty("--footer-background-color","#c8d0d8");
+          document.documentElement.style.setProperty("--nav-list-light-bg","#c8d0d8");
         } else {
           document.documentElement.style.setProperty("--background-color","#242142");
           document.documentElement.style.setProperty("--font-color", "#ededed");
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
           document.documentElement.style.setProperty("--background-light-color", "#f2f3f4");
           document.documentElement.style.setProperty("--sec-font-color","#A22E76");
           document.documentElement.style.setProperty("--footer-background-color","#142142");
-          
+          document.documentElement.style.setProperty("--nav-list-light-bg","#242161");
         }
       });
     })

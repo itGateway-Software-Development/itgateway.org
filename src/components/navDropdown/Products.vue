@@ -1,100 +1,154 @@
 <template>
-    <div class="dropdown">
-        <div class="content d-flex gap-5">
-            <div class="row dropdown-content-row w-100">
-              <div class="col-12 col-sm-6 col-md-4 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content">
-                    <img :src="require('@/assets/images/nav_icon/product/cloud.png')" alt="">
-                    <h5 class="fw-bold text-center">itGateway Cloud</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content">
-                    <img :src="require('@/assets/images/nav_icon/product/erp.png')" alt="">
-                    <h5 class="fw-bold text-center">itGateway ERP</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content">
-                    <img :src="require('@/assets/images/nav_icon/product/pos.png')" alt="">
-                    <h5 class="fw-bold text-center">itGateway POS</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content">
-                    <img :src="require('@/assets/images/nav_icon/product/lms.png')" alt="">
-                    <h5 class="fw-bold text-center">itGateway LMS</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content">
-                    <img :src="require('@/assets/images/nav_icon/product/integration.png')" alt="">
-                    <h5 class="fw-bold text-center">Software Integration</h5>
-                  </div>
-                </router-link>
-              </div>
+  <div class="dropdown">
+      <div class="content d-flex gap-5">
+          <ul class="pt-5 pe-5 multi">
+            <li class="mb-5">
+              <h5 class="d-flex align-items-center">
+                Overview
+                <span
+                  class="material-symbols-outlined ms-2"
+                  style="font-size: 25px"
+                >
+                  trending_flat
+                </span>
+              </h5>
+            </li>
+            <li
+              @mouseover="dropdownContent = 'cloud_service'"
+              :class="{ active: dropdownContent == 'cloud_service' }"
+            >
+              Cloud Service
+            </li>
+            <li
+              @mouseover="dropdownContent = 'software'"
+              :class="{ active: dropdownContent == 'software' }"
+            >
+              Software
+            </li>
+            <li
+              @mouseover="dropdownContent = 'server&storage'"
+              :class="{ active: dropdownContent == 'server&storage' }"
+            >
+              Server & Storage
+            </li>
+            <li
+              @mouseover="dropdownContent = 'networking'"
+              :class="{ active: dropdownContent == 'networking' }"
+            >
+              Networking
+            </li>
+            <li
+              @mouseover="dropdownContent = 'security'"
+              :class="{ active: dropdownContent == 'security' }"
+            >
+              Security
+            </li>
+            <li
+              @mouseover="dropdownContent = 'surveillance'"
+              :class="{ active: dropdownContent == 'surveillance' }"
+            >
+              Video Surveillance
+            </li>
+            <li
+              @mouseover="dropdownContent = 'laptop&desktop'"
+              :class="{ active: dropdownContent == 'laptop&desktop' }"
+            >
+              Laptop & Desktop
+            </li>
+            <li
+              @mouseover="dropdownContent = 'licensing'"
+              :class="{ active: dropdownContent == 'licensing' }"
+            >
+              Licensing
+            </li>
+          </ul>
+
+          <div class="solution pt-5">
+            <div v-if="dropdownContent == 'cloud_service'">
+              <CloudService />
             </div>
-        </div>
+
+            <div v-if="dropdownContent == 'software'">
+              <Software />
+            </div>
+
+            <div v-if="dropdownContent == 'server&storage'">
+              <ServerStorage />
+            </div>
+
+            <div v-if="dropdownContent == 'networking'">
+              <Networking />
+            </div>
+
+            <div v-if="dropdownContent == 'security'">
+              <Security />
+            </div>
+
+            <div v-if="dropdownContent == 'surveillance'">
+              <Surveillance />
+            </div>
+
+            <div v-if="dropdownContent == 'laptop&desktop'">
+              <LaptopDesktop />
+            </div>
+
+            <div v-if="dropdownContent == 'licensing'">
+              <Licensing />
+            </div>
+          </div>
       </div>
-</template>
+    </div>
+  </template>
+  
+  <script>
+ 
+import Licensing from './products/Licensing'
+import LaptopDesktop from './products/LaptopDesktop'
+import Surveillance from './products/Surveillance'
+import Security from './products/Security'
+import Networking from './products/Networking'
+import ServerStorage from './products/ServerStorage'
+import Software from './products/Software'
+import CloudService from './products/CloudService'
+export default {
+    components: {
+    Licensing,
+    LaptopDesktop,
+    Surveillance,
+    Security,
+    Networking,
+    ServerStorage,
+    Software,
+    CloudService,
 
-<script>
-    export default {
-        
+     },
+    props: ['dropdownContent'],
+  
     }
-</script>
-
-<style scoped>
-  .dropdown-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 10px;
-    border-radius: 10px;
-    transition: .3s ease;
-  }
-
-  .dropdown-content:hover {
-    transform: translateY(-5px);
-  }
-
-  .dropdown-content:hover h5 {
-    color: var(--main-color);
-  }
-
-  .dropdown-content img {
-    width: 100px;
-  }
-
-  @media (max-width: 1500px) {
-    .dropdown-content img {
-      width: 80px;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .dropdown-content{
-      padding: 0px 10px 20px;
-    }
-
-    .dropdown-content img {
-      width: 60px;
-    }
-    .dropdown-content h5 {
-      font-size: 16px;
-    }
-  }
-</style>
-
-
+  </script>
+  
+  <style>
+      .product-container {
+          position: relative;
+      }
+      .product-container .readmore {
+          position: absolute;
+          bottom: -10px;
+          overflow: hidden;
+      }
+  
+      .product-container a {
+          transform: translateX(-127px);
+          transition: .5s ease;
+          transition: .5s;
+      }
+  
+      .product-container:hover .readmore a {
+          transform: translateX(0);
+          border-bottom: 1px solid #EC6316;
+      }
+  
+      .product-container:hover .readmore a:hover {
+        color: #EC6316 !important;
+      }
+  </style>

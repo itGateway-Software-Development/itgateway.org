@@ -1,151 +1,106 @@
 <template>
-    <div class="dropdown">
-        <div class="content d-flex gap-5">
-            <div class="row dropdown-content-row w-100">
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content ">
-                    <img :src="require('@/assets/images/nav_icon/service/cs.png')" alt="">
-                    <h5 class="fw-bold text-center">Cloud Services</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content ">
-                    <img :src="require('@/assets/images/nav_icon/service/software.png')" alt="">
-                    <h5 class="fw-bold text-center">Software Development</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content ">
-                    <img :src="require('@/assets/images/nav_icon/service/premium_it_solution.png')" alt="">
-                    <h5 class="fw-bold text-center">Premium IT Solutions</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content ">
-                    <img :src="require('@/assets/images/nav_icon/service/engineering_solution.png')" alt="">
-                    <h5 class="fw-bold text-center">Engineering Solutions</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content ">
-                    <img :src="require('@/assets/images/nav_icon/service/manage_service.png')" alt="">
-                    <h5 class="fw-bold text-center">Manage Services</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content ">
-                    <img :src="require('@/assets/images/nav_icon/service/training.png')" alt="">
-                    <h5 class="fw-bold text-center">IT Trainings</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content ">
-                    <img :src="require('@/assets/images/nav_icon/service/cyber_security.png')" alt="">
-                    <h5 class="fw-bold text-center">Cyber Security</h5>
-                  </div>
-                </router-link>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                <router-link to="#">
-                  <div class="dropdown-content ">
-                    <img :src="require('@/assets/images/nav_icon/service/application.png')" alt="">
-                    <h5 class="fw-bold text-center">Application Services</h5>
-                  </div>
-                </router-link>
-              </div>
+  <div class="dropdown">
+      <div class="content d-flex gap-5">
+          <ul class="pt-5 pe-5 multi">
+            <li class="mb-5">
+              <h5 class="d-flex align-items-center">
+                Overview
+                <span
+                  class="material-symbols-outlined ms-2"
+                  style="font-size: 25px"
+                >
+                  trending_flat
+                </span>
+              </h5>
+            </li>
+            <li
+              @mouseover="dropdownContent = 'cloud_service'"
+              :class="{ active: dropdownContent == 'cloud_service' }"
+            >
+              Cloud Services
+            </li>
+            <li
+              @mouseover="dropdownContent = 'software_development'"
+              :class="{ active: dropdownContent == 'software_development' }"
+            >
+              Software Development
+            </li>
+            <li
+              @mouseover="dropdownContent = 'premium'"
+              :class="{ active: dropdownContent == 'premium' }"
+            >
+              Premium IT Solutions
+            </li>
+            <li
+              @mouseover="dropdownContent = 'engineering'"
+              :class="{ active: dropdownContent == 'engineering' }"
+            >
+              Engineering Solution
+            </li>
+          </ul>
+
+          <div class="solution pt-5">
+            <div v-if="dropdownContent == 'cloud_service'">
+              <CloudService />
             </div>
-            <!-- <ul class="pt-5 ps-5">
-              <li>
-                Cloud Services
-              </li>
-              <li>
-                Software Development
-              </li>
-              <li>
-                Premium IT Solutions
-              </li>
-              <li>
-                Engineering Solutions
-              </li>
-              <li>
-                Managed Services
-              </li>
-              <li>
-                IT Trainings
-              </li>
-              <li>
-                Cyber Security
-              </li>
-              <li>
-                Application Services
-              </li>
-            </ul> -->
-        </div>
+
+            <div v-if="dropdownContent == 'software_development'">
+              <SoftwareDevelopment />
+            </div>
+
+            <div v-if="dropdownContent == 'premium'">
+              <PremiumItSolution />
+            </div>
+
+            <div v-if="dropdownContent == 'engineering'">
+              <EngineeringSolution />
+            </div>
+            
+          </div>
       </div>
-</template>
-
-<script>
-    export default {
-        
-    }
-</script>
-
-<style scoped>
+    </div>
+  </template>
+  
+  <script>
  
-
-  .dropdown-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 10px;
-    border-radius: 10px;
-    transition: .3s ease;
-  }
-
-  .dropdown-content:hover {
-    transform: translateY(-5px);
-  }
-
-  .dropdown-content:hover h5 {
-    color: var(--main-color);
-  }
-
-  .dropdown-content img {
-    width: 100px;
-  }
-
-  @media (max-width: 1500px) {
-    .dropdown-content img {
-      width: 80px;
+  import EngineeringSolution from './servicegroup/EngineeringSolution'
+import PremiumItSolution from './servicegroup/PremiumItSolution'
+import SoftwareDevelopment from './servicegroup/SoftwareDevelopment'
+import CloudService from './servicegroup/CloudService'
+export default {
+    components: {
+    EngineeringSolution,
+    PremiumItSolution,
+    SoftwareDevelopment,
+    CloudService,
+     },
+    props: ['dropdownContent'],
+  
     }
-  }
-
-  @media (max-width: 1200px) {
-    .dropdown-content{
-      padding: 0px 10px 20px;
-    }
-    .dropdown-content img {
-      width: 60px;
-    }
-    .dropdown-content h5 {
-      font-size: 16px;
-    }
-  }
-</style>
-
-
+  </script>
+  
+  <style>
+      .service-group-container {
+          position: relative;
+      }
+      .service-group-container .readmore {
+          position: absolute;
+          bottom: -10px;
+          overflow: hidden;
+      }
+  
+      .service-group-container a {
+          transform: translateX(-127px);
+          transition: .5s ease;
+          transition: .5s;
+      }
+  
+      .service-group-container:hover .readmore a {
+          transform: translateX(0);
+          border-bottom: 1px solid #EC6316;
+      }
+  
+      .service-group-container:hover .readmore a:hover {
+        color: #EC6316 !important;
+      }
+  </style>

@@ -246,11 +246,21 @@ nav .language button:hover {
 .menu .dropdown ul {
     list-style: none;
     display: inline-block;
+    height: 0px;
+    transition: .5s ease-out;
+}
+
+.menu:hover .dropdown ul {
+    height: 590px;
 }
 
 .menu .dropdown ul.multi {
-    width: 12%;
-    border-right: 1px solid var(--main-color);
+    width: 15%;
+    background: var(--nav-list-light-bg);
+}
+
+.menu .dropdown .solution {
+    width: 85%;
 }
 
 .menu .dropdown ul li {
@@ -269,6 +279,18 @@ nav .language button:hover {
 @media (max-width: 1500px) {
     .menu:hover .dropdown{
         height: 450px;
+    }
+
+    .menu:hover .dropdown ul {
+        height: 440px;
+    }
+
+    .menu .dropdown ul.multi {
+        width: 22%;
+    }
+
+    .menu .dropdown .solution {
+        width: 78%;
     }
 }
 
@@ -322,11 +344,20 @@ nav .language button:hover {
     }
 
     .menu:hover .dropdown{
-        height: 500px;
+        height: 520px;
     }
 
+    .menu:hover .dropdown ul {
+        height: 510px;
+    }
+
+
     .menu .dropdown ul.multi {
-        width: 17%;
+        width: 27%;
+    }
+
+    .menu .dropdown .solution {
+        width: 73%;
     }
 }
 
@@ -334,6 +365,14 @@ nav .language button:hover {
     nav .search-input {
         right: 52px;
         height: 25px;
+    }
+
+    .menu:hover .dropdown{
+        height: 600px;
+    }
+
+    .menu:hover .dropdown ul {
+        height: 590px;
     }
 
     nav .search-input.searching {
@@ -350,6 +389,7 @@ nav .language button:hover {
     nav .search-input.searching {
         width:280px;
     }
+
 }
 
 @media (max-width: 768px) {
