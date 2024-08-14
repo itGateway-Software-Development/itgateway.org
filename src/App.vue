@@ -7,13 +7,17 @@
     </v-main>
     <Footer />
   </v-app>
+
+  <Loading v-if="loading" />
 </template>
 
 <script>
 import Footer from './components/Footer'
 import Navbar from "@/components/Navbar.vue";
 import Loading from "./components/Loading.vue";
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
+
 export default {
   components: {
     Footer, Navbar, Loading },
@@ -21,12 +25,25 @@ export default {
     const loading = ref(true);
     const isHover = ref(false);
     const theme = ref('light');
+    const route = useRoute();
 
     const menuHoverEffect = (data) => isHover.value = data;
     const handleTheme = (data) => theme.value = data;
+
+    const loadContent = () => {
+        loading.value = true;
+        
+        setTimeout(() => {
+          loading.value = false;
+        }, 1000);
+      };
+
+    watch(route, () => loadContent())
     
     onMounted(() => {
-      loading.value = false;
+      window.addEventListener('load', () => {
+          loading.value = false;
+        })
     })
 
     return {loading, menuHoverEffect, isHover, handleTheme, theme}
