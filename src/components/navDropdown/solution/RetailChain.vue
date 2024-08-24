@@ -1,14 +1,7 @@
 <template>
-    <div class="solution-container">
-        
-    </div>
+  <div class="solution-container"></div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
-
-
-

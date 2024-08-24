@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Chakra+Petch:wght@700&family=Roboto+Condensed&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Chakra+Petch:wght@700&family=Roboto+Condensed&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -23,23 +23,27 @@
   --sec-background-light-color: #dfe6ee;
 
   --nav-list-dark-bg: #242161;
-  --nav-list-light-bg: #c8d0d8;
+  --nav-list-light-bg: #242161;
+
+  --nav-list-font-color: #ededed;
 
   --font-color: #ededed;
   --font-dark-color: #3f3f3f;
 
-  --sec-font-color: #A22E76;
+  --sec-font-color: #a22e76;
   --sec-font-light-color: #ededed;
 
-  --main-color: #EC6316;
-  --sec-main-color: #A22E76;
+  --main-color: #ec6316;
+  --sec-main-color: #a22e76;
+
+  --card-border-color: #00000028;
+  --card-border-light-color: #ec6316;
 
   --language-bg-color: #f2f2f2;
-  --language-bg-light-color : #dcdcdc;
+  --language-bg-light-color: #dcdcdc;
 
   --footer-background-color: #142142;
   --footer-light-background-color: #c8d0d8;
-
 }
 
 #app {
@@ -51,26 +55,25 @@
   color: var(--font-color);
 }
 
-
 #app a {
   text-decoration: none;
   color: var(--font-color);
 }
 
 #app .section-header {
-  background: linear-gradient(99deg,#EC6316 3%,#ff6600 90%);
+  background: linear-gradient(99deg, #ec6316 3%, #ff6600 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #app .primary-btn {
   background: transparent;
-  border: 2px solid #EC6316;
+  border: 2px solid #ec6316;
   border-radius: 0px 18px 0 18px;
   color: var(--font-color);
   font-size: 15px;
   letter-spacing: 0.03rem;
-  transition: .5s ease;
+  transition: 0.5s ease;
   font-weight: 550;
   position: relative;
   z-index: 1;
@@ -79,21 +82,21 @@
 
 #app .primary-btn.fill {
   border: 2px solid #e25a00 !important;
-  background: linear-gradient(99deg,#EC6316 3%,#c75b13 90%) !important;
+  background: linear-gradient(99deg, #ec6316 3%, #c75b13 90%) !important;
   color: #ededed;
 }
 
 #app .primary-btn:hover {
-  border: 2px solid #EC6316 !important;
+  border: 2px solid #ec6316 !important;
   color: #ededed !important;
   transform: translateY(-5px);
 }
 
 #app .primary-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   /* background: linear-gradient(99deg, #EC6316 3%, #ff6600 90%); */
-  background: linear-gradient(99deg,#EC6316 3%,#ff6600 90%);
+  background: linear-gradient(99deg, #ec6316 3%, #ff6600 90%);
   z-index: -1;
   padding: 0.25em 0.5em;
   display: block;
@@ -110,7 +113,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  transition: all .8s;
+  transition: all 0.8s;
   transform: skewX(-45deg) scale(2, 1);
 }
 
@@ -128,7 +131,8 @@
   pointer-events: none;
 }
 
-nav, nav .dropdown {
+nav,
+nav .dropdown {
   padding: 5px 3%;
 }
 
@@ -141,20 +145,33 @@ nav, nav .dropdown {
   overflow: hidden;
 }
 
-
 .main-btn:hover {
   background: var(--background-light-color);
   color: var(--sec-font-color);
 }
+/* ========================
+    swiper JS
+==========================*/
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ec6316 !important;
+}
+
+.swiper-button-next {
+  right: 20px !important;
+}
+
+.swiper-button-prev {
+  left: 20px !important;
+}
 
 /* ========================
     Mobile Menu Drawer
 ==========================*/
 #drawer {
-    width: 100% !important;
+  width: 100% !important;
 }
-
 
 /* ========================
     Responsive
@@ -166,7 +183,7 @@ nav, nav .dropdown {
 }
 
 @media (max-width: 1200px) {
-  *{
+  * {
     font-size: 15px;
   }
   .content-wrapper {
@@ -186,9 +203,4 @@ nav, nav .dropdown {
   .content-wrapper {
     padding: 10px 3%;
   }
-
 }
-
-
-
-
