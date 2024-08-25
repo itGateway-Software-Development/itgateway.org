@@ -25,6 +25,6 @@ export default {
 .our-expert-slide h2 {
   font-family: "Chakra Petch", sans-serif;
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 </style>
