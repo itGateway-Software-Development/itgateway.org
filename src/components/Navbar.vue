@@ -61,8 +61,16 @@
               search
             </span>
           </span>
-          <router-link to="" class="menu">{{ $t("contact") }}</router-link>
-          <router-link to="/aboutus" class="menu">{{
+          <router-link to="/" class="menu" v-if="route.name == 'contact'">{{
+            $t("home")
+          }}</router-link>
+          <router-link to="/contact" class="menu" v-else>{{
+            $t("contact")
+          }}</router-link>
+          <router-link to="/" class="menu" v-if="route.name == 'aboutus'">{{
+            $t("home")
+          }}</router-link>
+          <router-link to="/aboutus" class="menu" v-else>{{
             $t("about")
           }}</router-link>
           <router-link
@@ -207,7 +215,7 @@
 import MobileDrawer from "./MobileDrawer";
 import "@/assets/css/nav.css";
 import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import Solutions from "@/components/navDropdown/Solutions";
 import ServiceGroup from "@/components/navDropdown/ServiceGroup";
 import Products from "@/components/navDropdown/Products";
@@ -232,6 +240,7 @@ export default {
     const language = ref("EN");
     const isScroll = ref(false);
     const isMobileSearch = ref(false);
+    const route = useRoute();
 
     const navigate = (route) => {
       router.push(route);
@@ -298,6 +307,7 @@ export default {
       isScroll,
       handleSearch,
       isMobileSearch,
+      route,
     };
   },
 };

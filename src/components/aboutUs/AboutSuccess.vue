@@ -20,7 +20,9 @@
         </div>
       </div>
       <div class="col-12 col-sm-12 col-xl-3">
-        <img :src="successImg" alt="" class="img-fluid success-img" />
+        <div class="success-img">
+          <img :src="successImg" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -32,7 +34,7 @@ export default {
   setup() {
     const successText =
       "We currently serve around 60 customers and manage 100 active projects. Our company is built on the talent of young professionals focused on development and innovation. The highest demand in IT requirements comes from cloud services and solutions, which we are providing to over 30 organizations.";
-    const successImg = ref(require("@/assets/images/about/success.png"));
+    const successImg = ref(require("@/assets/images/about/success.gif"));
     const stories = [
       {
         data: "60+",
@@ -93,6 +95,10 @@ export default {
 
 .grid-item p {
   font-size: 20px;
+}
+
+.success-img {
+  background-image: url("@/assets/images/about/success.gif");
 }
 
 @media (max-width: 800px) {

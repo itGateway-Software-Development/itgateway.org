@@ -9,5 +9,6 @@
     "event" : "Events",
     "careers" : "Careers",
     "customer_portal" : "Customer Portal",
-    "language" : "Languages"
+    "language" : "Languages",
+    "home": "Home"
 }
