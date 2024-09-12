@@ -14,7 +14,7 @@
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
           <span class="material-symbols-outlined me-3"> folder_open </span
-          >Network Attach Storage​
+          >Network Attached Storage​
         </h5>
         <router-link to="#" class="hilight-font"
           >Share and manage your data securely with our scalable & reliable NAS

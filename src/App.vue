@@ -54,6 +54,7 @@ export default {
       // script.src = "https://app.gleen.ai/sdk/gleenWidget.js";
       // script.async = true;
       // document.head.appendChild(script);
+      // window.tidioChatApi?.open();
     });
 
     return { loading, menuHoverEffect, isHover, handleTheme, theme };
