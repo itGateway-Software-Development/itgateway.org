@@ -17,24 +17,43 @@
           <span class="material-symbols-outlined me-3"> cloud_sync </span
           >Elastic Managed Cloud Services
         </h5>
-        <router-link to="#" class="hilight-font"
+        <a
+          href="/"
+          @click="
+            redirectUrl(
+              'https://www.itgatewaycloud.com/explore/manage-cloud-services'
+            )
+          "
+          class="hilight-font"
           >Managed and support your cloud resources running on itGateway Cloud,
-          AWS, Microsoft Azure, Google Cloud Platform & other CSP.
-          ​​</router-link
+          AWS, Microsoft Azure, Google Cloud Platform & other CSP. ​​</a
         >
       </div>
     </div>
+    <!-- <a href="https://www.google.com">Google</a> -->
     <div class="readmore">
-      <router-link to="#" class="d-flex align-items-center gap-2">
+      <a
+        href="/"
+        @click="redirectUrl('https://www.itgatewaycloud.com/')"
+        class="d-flex align-items-center gap-2"
+      >
         <span>Read More Solution</span>
         <span class="material-symbols-outlined mt-1 ms-1" style="color: #ec6316"
           >arrow_right_alt</span
         >
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    const redirectUrl = (url) => {
+      window.open(url);
+    };
+
+    return { redirectUrl };
+  },
+};
 </script>

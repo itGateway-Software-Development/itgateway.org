@@ -33,15 +33,16 @@
                 the bulk of the card's content.
               </p>
               <div class="readmore">
-                <router-link
-                  :to="`${service.url}`"
+                <a
+                  target="_blank"
+                  :href="`${service.url}`"
                   class="d-flex align-items-center gap-2"
                 >
                   <span>Read More</span>
                   <span class="material-symbols-outlined mt-1 ms-1"
                     >arrow_right_alt</span
                   >
-                </router-link>
+                </a>
               </div>
             </div>
           </div>
@@ -60,7 +61,7 @@ export default {
         title: "itGateway Cloud",
         content:
           "Running your resources and keep the data on our cloud infrastructure securely.",
-        url: "#",
+        url: "https://www.itgatewaycloud.com/",
         icon: require("@/assets/images/service_group/cloud.png"),
         icon_light: require("@/assets/images/service_group/cloud_light.png"),
         image: require("@/assets/images/service_group/picture_1.png"),
@@ -106,8 +107,8 @@ export default {
 
 .card {
   position: relative;
-  height: 450px;
-  background-color: var(--sec-background-color);
+  height: 500px;
+  background-color: var(--card-background-color);
   color: var(--font-color);
 }
 .service-container {
@@ -129,6 +130,7 @@ export default {
 
 .card-text {
   opacity: 0.7;
+  font-size: 17px;
 }
 
 .service-container:hover {
@@ -179,7 +181,7 @@ export default {
 
 @media (max-width: 600px) {
   .card {
-    height: 400px;
+    height: 480px;
   }
 }
 </style>

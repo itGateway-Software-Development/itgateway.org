@@ -4,7 +4,7 @@
       <div class="col-5 col-md-3 col-lg-2 mb-5">
         <h4 class="section-header">Services</h4>
         <div class="content">
-          <a href="https://main.itgateway.cloud" target="_blank">Cloud​</a>
+          <a href="https://www.itgatewaycloud.com/" target="_blank">Cloud​</a>
           <router-link to="#">Applications​</router-link>
           <router-link to="#">Cyber Security​</router-link>
           <router-link to="#">Infrastructure​</router-link>
@@ -53,11 +53,19 @@
               target="_blink"
               ><i class="fa-brands fa-facebook-f"></i
             ></a>
-            <a href="" target="_blink"><i class="fa-brands fa-youtube"></i></a>
-            <a href="" target="_blink"
+            <a
+              href="https://youtube.com/@itgateway5550?si=7PLrq5ZJJzLQFQyw"
+              target="_blink"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/itgateway-technology-group-ltd/"
+              target="_blink"
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
-            <a href="" target="_blink"
+            <a
+              href="https://www.instagram.com/itgatewaytechnologygroupltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blink"
               ><i class="fa-brands fa-instagram"></i
             ></a>
           </div>

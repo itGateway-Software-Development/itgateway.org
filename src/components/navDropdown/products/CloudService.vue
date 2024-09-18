@@ -71,16 +71,28 @@
       </div>
     </div>
     <div class="readmore">
-      <router-link to="#" class="d-flex align-items-center gap-2">
+      <a
+        href="/"
+        @click="redirectUrl('https://www.itgatewaycloud.com/')"
+        class="d-flex align-items-center gap-2"
+      >
         <span>Read More Solution</span>
         <span class="material-symbols-outlined mt-1 ms-1" style="color: #ec6316"
           >arrow_right_alt</span
         >
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    const redirectUrl = (url) => {
+      window.open(url);
+    };
+
+    return { redirectUrl };
+  },
+};
 </script>

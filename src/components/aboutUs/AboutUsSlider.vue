@@ -10,7 +10,9 @@
       <p
         class="mb-3 text-white text-decoration-underline text-decoration-underline"
       >
-        Cloud Solutions
+        <a href="https://www.itgatewaycloud.com/" target="_blank"
+          >Cloud Solutions</a
+        >
       </p>
       <p class="mb-3 text-white text-decoration-underline">
         Premium IT Solutions
@@ -26,7 +28,9 @@
         also Managed Cloud Services.
       </h2>
       <p class="mb-1 mt-80 text-white text-decoration-underline">
-        Learn itGateway Cloud Platform
+        <a href="https://www.itgatewaycloud.com/" target="_blank">
+          Learn itGateway Cloud Platform</a
+        >
       </p>
       <!-- <p class="text-white">
         Explore additional offering in
@@ -190,6 +194,12 @@ export default {
 
 .carousel-content p {
   font-size: 24px;
+}
+
+.carousel-content p a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #ededed !important;
 }
 
 .carousel-content button {

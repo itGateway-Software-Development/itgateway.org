@@ -3,8 +3,10 @@
     <nav class="pb-1">
       <div class="d-flex justify-content-between align-items-center">
         <div class="logo">
-          <img :src="require('@/assets/images/logo.png')" alt="" />
-          <h5 class="mt-2">itGateway Technology Group</h5>
+          <router-link to="/" class="d-flex align-items-center gap-2">
+            <img :src="require('@/assets/images/logo.png')" alt="" />
+            <h5 class="mt-2">itGateway Technology Group</h5>
+          </router-link>
         </div>
 
         <!-- mobile menu button  -->
@@ -61,16 +63,16 @@
               search
             </span>
           </span>
-          <router-link to="/" class="menu" v-if="route.name == 'contact'">{{
+          <!-- <router-link to="/" class="menu" v-if="route.name == 'contact'">{{
             $t("home")
-          }}</router-link>
-          <router-link to="/contact" class="menu" v-else>{{
+          }}</router-link> -->
+          <router-link to="/contact" class="menu">{{
             $t("contact")
           }}</router-link>
-          <router-link to="/" class="menu" v-if="route.name == 'aboutus'">{{
+          <!-- <router-link to="/" class="menu" v-if="route.name == 'aboutus'">{{
             $t("home")
-          }}</router-link>
-          <router-link to="/aboutus" class="menu" v-else>{{
+          }}</router-link> -->
+          <router-link to="/aboutus" class="menu">{{
             $t("about")
           }}</router-link>
           <router-link

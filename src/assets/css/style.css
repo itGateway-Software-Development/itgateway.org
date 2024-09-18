@@ -20,10 +20,12 @@
   --background-light-color: #f2f3f4;
 
   --sec-background-color: #302d58;
-  --sec-background-light-color: #dfe6ee;
+  --sec-background-light-color: #dfe6ee88;
 
   --nav-list-dark-bg: #242161;
   --nav-list-light-bg: #242161;
+
+  --card-background-color: #f2f3f4;
 
   --nav-list-font-color: #ededed;
 

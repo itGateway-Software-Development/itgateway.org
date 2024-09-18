@@ -273,7 +273,8 @@ nav .language button:hover {
 }
 
 .hilight-font {
-  opacity: 0.7;
+  opacity: 0.8;
+  font-size: 17px;
 }
 
 .menu .dropdown .material-symbols-outlined {

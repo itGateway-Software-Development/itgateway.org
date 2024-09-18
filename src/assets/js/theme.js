@@ -28,6 +28,10 @@
       "--card-border-color",
       "#00000028"
     );
+    document.documentElement.style.setProperty(
+      "--card-background-color",
+      "#f2f3f4"
+    );
   }
   setLightMode();
 })();
@@ -83,6 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
           "--card-border-color",
           "#00000028"
         );
+        document.documentElement.style.setProperty(
+          "--card-background-color",
+          "#f2f3f4"
+        );
       } else {
         document.documentElement.style.setProperty(
           "--background-color",
@@ -124,6 +132,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty(
           "--card-border-color",
           "#ec6316"
+        );
+        document.documentElement.style.setProperty(
+          "--card-background-color",
+          "#302d58"
         );
       }
     });

@@ -11,7 +11,7 @@
             :key="index"
           >
             <div
-              class="d-flex flex-column justify-content-center align-items-center align-items-md-start"
+              class="d-flex flex-column justify-content-center align-items-center align-items-md-center"
             >
               <span :style="{ color: story.color }">{{ story.data }}</span>
               <p>{{ story.title }}</p>
@@ -97,8 +97,10 @@ export default {
   font-size: 20px;
 }
 
-.success-img {
-  background-image: url("@/assets/images/about/success.gif");
+@media (max-width: 1200px) {
+  .success-img img {
+    width: 300px;
+  }
 }
 
 @media (max-width: 800px) {
