@@ -240,6 +240,7 @@ nav .language button:hover {
 .menu .dropdown .content {
   width: 100%;
   border-top: 1px solid var(--main-color);
+  height: 600px;
 }
 
 .menu .dropdown ul {

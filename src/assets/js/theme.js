@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         document.documentElement.style.setProperty(
           "--nav-list-light-bg",
-          "#c8d0d8"
+          "#242161"
         );
         document.documentElement.style.setProperty(
           "--card-border-color",

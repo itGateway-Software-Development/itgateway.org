@@ -2,7 +2,7 @@
   <div class="contact-us-wrapper">
     <div class="row desktop">
       <div class="col-12 col-xl-6">
-        <div class="info justify-content-center">
+        <div class="info justify-content-center content-wrapper">
           <form class="form-group">
             <div class="d-flex flex-wrap justify-content-between">
               <input
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="col-12 col-xl-6">
-        <div class="info justify-content-center">
+        <div class="info justify-content-center content-wrapper">
           <form class="form-group">
             <div class="d-flex flex-wrap justify-content-between">
               <input
@@ -191,8 +191,8 @@ export default {
 }
 
 .form-group {
-  padding: 50px 80px;
   line-height: 30px;
+  margin-top: 50px;
 }
 
 .mb-20 {
@@ -245,14 +245,14 @@ export default {
 }
 
 .normal-input {
-  width: 300px;
+  width: 250px;
   border: 2px solid #fff;
   border-radius: 5px;
   padding: 7px;
 }
 
 .normal-textarea {
-  width: 670px;
+  width: 100%;
   height: 200px;
   border: 2px solid #fff;
   border-radius: 5px;
@@ -312,7 +312,7 @@ export default {
   }
 
   .normal-input {
-    width: 250px;
+    width: 200px;
   }
 
   .name-group {
@@ -323,9 +323,6 @@ export default {
     width: 150px;
   }
 
-  .normal-textarea {
-    width: 350px;
-  }
   .contact-detail {
     padding: 20px 20px 20px 20px;
   }
@@ -333,13 +330,7 @@ export default {
 
 @media (max-width: 1200px) {
   .normal-input {
-    width: 200px;
-  }
-}
-
-@media (max-width: 800px) {
-  .normal-input {
-    width: 300px;
+    width: 350px;
   }
 
   .desktop {
@@ -351,21 +342,27 @@ export default {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 770px) {
+  .form-group {
+    margin-bottom: 100px;
+  }
+
+  .normal-input {
+    width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
   .contact-us-wrapper {
     margin-top: 90px;
   }
 
   .normal-input {
-    width: 180px;
+    width: 100%;
   }
 
   .form-group {
-    padding: 80px 20px 180px;
-  }
-
-  .normal-textarea {
-    width: 380px;
+    margin-bottom: 90px;
   }
 }
 </style>

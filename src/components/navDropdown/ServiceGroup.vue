@@ -87,7 +87,7 @@ export default {
 }
 
 .service-group-container a {
-  transform: translateX(-127px);
+  transform: translateX(-140px);
   transition: 0.5s ease;
   transition: 0.5s;
 }
