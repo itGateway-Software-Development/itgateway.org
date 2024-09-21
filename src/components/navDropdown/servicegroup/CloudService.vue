@@ -2,14 +2,20 @@
   <div class="service-group-container">
     <div class="row mt-5">
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
-        <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> cloud </span>itGateway
-          Cloud
-        </h5>
-        <router-link to="#" class="hilight-font"
+        <a href="#" @click="redirectUrl('https://www.itgatewaycloud.com/')">
+          <h5 class="d-flex">
+            <span class="material-symbols-outlined me-3"> cloud </span>itGateway
+            Cloud
+          </h5>
+        </a>
+
+        <a
+          href="#"
+          @click="redirectUrl('https://www.itgatewaycloud.com/')"
+          class="hilight-font"
           >Build and deploy your resources on itGateway Cloud and access them
           from anywhere. Now, multiple regions are available in Singapore,
-          Thailand, Netherland & Myanmar.​​</router-link
+          Thailand, Netherland & Myanmar.​​</a
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
