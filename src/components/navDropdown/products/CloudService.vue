@@ -2,14 +2,25 @@
   <div class="product-container">
     <div class="row mt-5">
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
-        <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> computer </span>Elastic
-          Virtual Machine​
-        </h5>
-        <router-link to="#" class="hilight-font"
+        <a
+          href="#"
+          @click="
+            redirectUrl('https://www.itgatewaycloud.com/products/compute/evm')
+          "
+          ><h5 class="d-flex">
+            <span class="material-symbols-outlined me-3"> computer </span
+            >Elastic Virtual Machine​
+          </h5></a
+        >
+
+        <a
+          herf="#"
+          @click="
+            redirectUrl('https://www.itgatewaycloud.com/products/compute/evm')
+          "
+          class="hilight-font"
           >Seamlessly integrate public and private clouds to achieve secure
-          cloud infrastructure, zero downtime and prevent data
-          loss.​</router-link
+          cloud infrastructure, zero downtime and prevent data loss.​</a
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
@@ -24,25 +35,51 @@
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
-        <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> dns </span>Elastic
-          Bare-Metal Server​​
-        </h5>
-        <router-link to="#" class="hilight-font"
+        <a
+          href="#"
+          @click="
+            redirectUrl(
+              'https://www.itgatewaycloud.com/products/compute/baremetal'
+            )
+          "
+        >
+          <h5 class="d-flex">
+            <span class="material-symbols-outlined me-3"> dns </span>Elastic
+            Bare-Metal Server​​
+          </h5></a
+        >
+
+        <a
+          herf="#"
+          class="hilight-font"
+          @click="
+            redirectUrl(
+              'https://www.itgatewaycloud.com/products/compute/baremetal'
+            )
+          "
           >Optimize your network performance and enhance security with SD-WAN to
-          ensure seamless connectivity and superior user
-          experiences.​​</router-link
+          ensure seamless connectivity and superior user experiences.​​</a
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
+        <a
+          href="#"
+          @click="
+            redirectUrl('https://www.itgatewaycloud.com/products/storage/efs')
+          "
+        ></a>
         <h5 class="d-flex">
           <span class="material-symbols-outlined me-3"> folder_copy </span
           >Elastic File Storage​
         </h5>
-        <router-link to="#" class="hilight-font"
+        <a
+          href="#"
+          class="hilight-font"
+          @click="
+            redirectUrl('https://www.itgatewaycloud.com/products/storage/efs')
+          "
           >Provide advanced and comprehensive security solutions designed to
-          protect your business from ever-evolving cyber threats or
-          attack.​</router-link
+          protect your business from ever-evolving cyber threats or attack.​</a
         >
       </div>
 
