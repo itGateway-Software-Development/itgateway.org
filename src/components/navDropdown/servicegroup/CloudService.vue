@@ -2,38 +2,48 @@
   <div class="service-group-container">
     <div class="row mt-5">
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
-        <a href="#" @click="redirectUrl('https://www.itgatewaycloud.com/')">
-          <h5 class="d-flex">
-            <span class="material-symbols-outlined me-3"> cloud </span>itGateway
-            Cloud
-          </h5>
-        </a>
+        <div class="menu-route">
+          <a href="#" @click="redirectUrl('https://www.itgatewaycloud.com/')">
+            <h5 class="d-flex">
+              <span class="material-symbols-outlined me-3"> cloud </span
+              >itGateway Cloud
+            </h5>
+          </a>
 
-        <a
-          href="#"
-          @click="redirectUrl('https://www.itgatewaycloud.com/')"
-          class="hilight-font"
-          >Build and deploy your resources on itGateway Cloud and access them
-          from anywhere. Now, multiple regions are available in Singapore,
-          Thailand, Netherland & Myanmar.​​</a
-        >
+          <a
+            href="#"
+            @click="redirectUrl('https://www.itgatewaycloud.com/')"
+            class="hilight-font"
+            ><span
+              >Build and deploy your resources on itGateway Cloud and access
+              them from anywhere. Now, multiple regions are available in
+              Singapore, Thailand, Netherland & Myanmar.​</span
+            >​</a
+          >
+        </div>
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
-        <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> cloud_sync </span
-          >Elastic Managed Cloud Services
-        </h5>
-        <a
-          href="/"
-          @click="
-            redirectUrl(
-              'https://www.itgatewaycloud.com/explore/manage-cloud-services'
-            )
-          "
-          class="hilight-font"
-          >Managed and support your cloud resources running on itGateway Cloud,
-          AWS, Microsoft Azure, Google Cloud Platform & other CSP. ​​</a
-        >
+        <div class="menu-route">
+          <h5 class="d-flex">
+            <span class="material-symbols-outlined me-3"> cloud_sync </span
+            >Elastic Managed Cloud Services
+          </h5>
+          <a
+            href="/"
+            @click="
+              redirectUrl(
+                'https://www.itgatewaycloud.com/explore/manage-cloud-services'
+              )
+            "
+            class="hilight-font"
+            ><span
+              >Managed and support your cloud resources running on itGateway
+              Cloud, AWS, Microsoft Azure, Google Cloud Platform & other
+              CSP.</span
+            >
+            ​​</a
+          >
+        </div>
       </div>
     </div>
     <!-- <a href="https://www.google.com">Google</a> -->
@@ -63,3 +73,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.menu-route h5,
+.menu-route span {
+  transition: 0.3s ease;
+}
+
+.menu-route:hover h5,
+.menu-route:hover span {
+  color: #ec6316;
+}
+</style>
