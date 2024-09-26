@@ -77,11 +77,13 @@
             @click="
               redirectUrl('https://www.itgatewaycloud.com/products/storage/efs')
             "
-          ></a>
-          <h5 class="d-flex">
-            <span class="material-symbols-outlined me-3"> folder_copy </span
-            >Elastic File Storage​
-          </h5>
+          >
+            <h5 class="d-flex">
+              <span class="material-symbols-outlined me-3"> folder_copy </span
+              >Elastic File Storage​
+            </h5>
+          </a>
+
           <a
             href="#"
             class="hilight-font"
@@ -98,27 +100,65 @@
       </div>
 
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
-        <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> storage </span>Elastic
-          Object Storage​​
-        </h5>
-        <router-link to="#" class="hilight-font"
-          >Automate the deployment, management, and coordination of your cloud
-          resources, ensuring seamless integration and efficient workflows with
-          our experts.​</router-link
-        >
+        <div class="menu-route">
+          <a
+            href="#"
+            @click="
+              redirectUrl('https://www.itgatewaycloud.com/products/storage/eos')
+            "
+          >
+            <h5 class="d-flex">
+              <span class="material-symbols-outlined me-3"> storage </span
+              >Elastic Object Storage​
+            </h5>
+          </a>
+
+          <a
+            href="#"
+            @click="
+              redirectUrl('https://www.itgatewaycloud.com/products/storage/eos')
+            "
+            class="hilight-font"
+            ><span
+              >Automate the deployment, management, and coordination of your
+              cloud resources, ensuring seamless integration and efficient
+              workflows with our experts.</span
+            >​</a
+          >
+        </div>
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
-        <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3">
-            screenshot_monitor </span
-          >Elastic Web Instance​
-        </h5>
-        <router-link to="#" class="hilight-font"
-          >Whether you need to enhance your existing datacenter or build a new
-          one, our expert team is dedicated to providing solutions.
-          ​</router-link
-        >
+        <div class="menu-route">
+          <a
+            href="#"
+            @click="
+              redirectUrl(
+                'https://www.itgatewaycloud.com/products/web/webhosting'
+              )
+            "
+          >
+            <h5 class="d-flex">
+              <span class="material-symbols-outlined me-3">
+                screenshot_monitor </span
+              >Elastic Web Instance​
+            </h5></a
+          >
+          <a
+            href="#"
+            class="hilight-font"
+            @click="
+              redirectUrl(
+                'https://www.itgatewaycloud.com/products/web/webhosting'
+              )
+            "
+            ><span
+              >Whether you need to enhance your existing datacenter or build a
+              new one, our expert team is dedicated to providing
+              solutions.</span
+            >
+            ​</a
+          >
+        </div>
       </div>
     </div>
     <div class="readmore">

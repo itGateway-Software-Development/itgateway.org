@@ -130,7 +130,7 @@ export default {
 
 .card-text {
   opacity: 0.7;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .service-container:hover {

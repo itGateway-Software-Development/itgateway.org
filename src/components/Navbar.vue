@@ -88,9 +88,12 @@
             </div>
           </router-link>
           <div class="btn-wrapper">
-            <a href="#" class="btn btn-sm menu-btn primary-btn text-center">{{
-              $t("customer_portal")
-            }}</a>
+            <a
+              href="https://console.itgatewaycloud.com/login"
+              target="_blank"
+              class="btn btn-sm menu-btn primary-btn text-center"
+              >{{ $t("customer_portal") }}</a
+            >
           </div>
 
           <!-- dark icon  -->

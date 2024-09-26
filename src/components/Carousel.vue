@@ -29,7 +29,7 @@
       </p>
       <button class="btn primary-btn">
         <a
-          href="https://www.itgatewaycloud.com/"
+          href="https://console.itgatewaycloud.com/register"
           target="_blank"
           class="d-flex gap-2 align-items-center"
           >Register Now <span class="material-symbols-outlined">east</span></a
