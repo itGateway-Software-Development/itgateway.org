@@ -3,13 +3,13 @@
     <div class="row mt-5">
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> api </span>
-          ERP​
+          <span class="material-symbols-outlined me-3"> chromecast_device </span
+          >IoT
         </h5>
         <router-link to="#" class="hilight-font"
-          >Streamline your operations with our robust ERP development services,
-          integrating all your business processes into a unified
-          system.​​​​</router-link
+          >Empowers businesses with real-time data collection, intelligent
+          automatuon, driving efficiency, innovation through connected devices
+          and smart solutions​​​​</router-link
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
@@ -35,46 +35,46 @@
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> hub</span>SD-WAN​
+          <span class="material-symbols-outlined me-3"> devices_other</span
+          >Enterprise Mobility
         </h5>
         <router-link to="#" class="hilight-font"
-          >Optimize your network performance and enhance security with SD-WAN to
-          ensure seamless connectivity and superior user experiences.​
+          >Enables secure, seamless access to business applications and data
+          from any device and empowering your workforce to stay productive.
           ​​</router-link
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3">
-            shopping_cart_checkout</span
-          >E-Commerce​
+          <span class="material-symbols-outlined me-3"> api </span>
+          ERP​
         </h5>
         <router-link to="#" class="hilight-font"
-          >Boost your online sales with our expert e-commerce web development
-          services, creating seamless. Secure and faster shopping
-          experiences.​</router-link
+          >Streamline your operations with our robust ERP development services,
+          integrating all your business processes into a unified
+          system.​​​​</router-link
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> analytics </span>Data
-          Analytics​
+          <span class="material-symbols-outlined me-3"> security </span>Cyber
+          Security​
         </h5>
         <router-link to="#" class="hilight-font"
-          >Unlocks valuable insights from your data, empowering smarter
-          decisions, enhanced peformance, optimize operations and strategic
-          business growth.​​​</router-link
+          >Provide advanced and comprehensive security solutions designed to
+          protect your business from ever-evolving cyber threats or
+          attack.​​</router-link
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> speed_camera </span
-          >Video Surveilliance
+          <span class="material-symbols-outlined me-3"> inventory </span
+          >Inventory Management
         </h5>
         <router-link to="#" class="hilight-font"
-          >Enhance security and monitor your premises with our advanced video
-          surveillance systems, providing real-time monitoring and reliable
-          protection.​</router-link
+          >Stream​lines stock tracking, optimizes order processes, and ensures
+          accurate inventory control for inproved efficiency and reduced
+          costs.</router-link
         >
       </div>
     </div>
@@ -100,14 +100,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.menu-route h5,
-.menu-route span {
-  transition: 0.3s ease;
-}
-
-.menu-route:hover h5,
-.menu-route:hover span {
-  color: #ec6316;
-}
-</style>

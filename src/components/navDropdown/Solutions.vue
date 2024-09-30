@@ -56,8 +56,8 @@
           Industrial
         </li>
         <li
-          @mouseover="dropdownContent = 'small&medium'"
-          :class="{ active: dropdownContent == 'small&medium' }"
+          @mouseover="dropdownContent = 's&mbusiness'"
+          :class="{ active: dropdownContent == 's&mbusiness' }"
         >
           Small & Medium Business
         </li>
@@ -86,26 +86,36 @@
         <div v-if="dropdownContent == 'food&beverage'">
           <FoodBeverage />
         </div>
+        <div v-if="dropdownContent == 'industrial'">
+          <Industrial />
+        </div>
+        <div v-if="dropdownContent == 's&mbusiness'">
+          <SMBusiness />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SMBusiness from "./solution/SMBusiness";
 import FoodBeverage from "./solution/FoodBeverage";
 import HealthCare from "./solution/HealthCare";
 import RetailChain from "./solution/RetailChain";
 import Manufacturing from "./solution/Manufacturing";
 import Finacial from "./solution/Finacial";
 import Enterprise from "./solution/Enterprise";
+import Industrial from "./solution/Industrial";
 export default {
   components: {
+    SMBusiness,
     FoodBeverage,
     HealthCare,
     RetailChain,
     Manufacturing,
     Finacial,
     Enterprise,
+    Industrial,
   },
   props: ["dropdownContent"],
 };

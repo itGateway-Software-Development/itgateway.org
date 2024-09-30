@@ -3,24 +3,24 @@
     <div class="row mt-5">
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> api </span>
-          ERP​
+          <span class="material-symbols-outlined me-3"> vertical_split</span
+          >Managed Services
         </h5>
         <router-link to="#" class="hilight-font"
-          >Streamline your operations with our robust ERP development services,
-          integrating all your business processes into a unified
-          system.​​​​</router-link
+          >With our Managed Services, offering procative monitoring, expert
+          management, and seamless support to ensure your systems run smoothly
+          and efficiently ​​</router-link
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
           <span class="material-symbols-outlined me-3"> chromecast_device </span
-          >IoT
+          >IT Outsource Services
         </h5>
         <router-link to="#" class="hilight-font"
-          >Empowers businesses with real-time data collection, intelligent
-          automatuon, driving efficiency, innovation through connected devices
-          and smart solutions​​​​</router-link
+          >Streamline IT operations with our comprehensive IT Outsource
+          Services, providing expert support, cost-effective and enhanced
+          efficiency to drive your business forward.​​​​</router-link
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
@@ -45,13 +45,13 @@
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
         <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> analytics </span>Data
-          Analytics​
+          <span class="material-symbols-outlined me-3"> contact_phone </span
+          >Collaboration Solutions​​​​​
         </h5>
         <router-link to="#" class="hilight-font"
-          >Unlocks valuable insights from your data, empowering smarter
-          decisions, enhanced peformance, optimize operations and strategic
-          business growth.​​​</router-link
+          >Enhance teamwork and communication with our innovative collaboration
+          solutions, designed to streamline workflows and boost
+          productivity.​​​​​</router-link
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">

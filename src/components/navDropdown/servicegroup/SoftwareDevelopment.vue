@@ -24,16 +24,37 @@
         >
       </div>
       <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px">
-        <h5 class="d-flex">
-          <span class="material-symbols-outlined me-3"> data_table </span>Cloud
-          Hosting​​​
-        </h5>
-        <router-link to="#" class="hilight-font"
-          >Unlock reliable and high-performance web hosting solutions, domain &
-          ssl certificate tailored to your needs, ensuring fast load times,
-          maximum uptime, and exceptional support for your online presence.
-          ​​</router-link
-        >
+        <div class="menu-route">
+          <a
+            href="#"
+            @click="
+              redirectUrl(
+                'https://www.itgatewaycloud.com/products/web/webhosting'
+              )
+            "
+          >
+            <h5 class="d-flex">
+              <span class="material-symbols-outlined me-3"> data_table </span
+              >Cloud Hosting​​​
+            </h5>
+          </a>
+
+          <a
+            href="#"
+            @click="
+              redirectUrl(
+                'https://www.itgatewaycloud.com/products/web/webhosting'
+              )
+            "
+            class="hilight-font"
+            ><span
+              >Unlock reliable and high-performance web hosting solutions,
+              domain & ssl certificate tailored to your needs, ensuring fast
+              load times, maximum uptime, and exceptional support for your
+              online presence.​</span
+            >​</a
+          >
+        </div>
       </div>
     </div>
     <div class="readmore">
@@ -48,5 +69,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    const redirectUrl = (url) => {
+      window.open(url);
+    };
+
+    return { redirectUrl };
+  },
+};
 </script>
+
+<style scoped>
+.menu-route h5,
+.menu-route span {
+  transition: 0.3s ease;
+}
+
+.menu-route:hover h5,
+.menu-route:hover span {
+  color: #ec6316;
+}
+</style>
