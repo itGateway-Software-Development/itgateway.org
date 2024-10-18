@@ -100,3 +100,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.menu-route h5,
+.menu-route span {
+  transition: 0.3s ease;
+}
+
+.menu-route:hover h5,
+.menu-route:hover span {
+  color: #ec6316;
+}
+</style>
